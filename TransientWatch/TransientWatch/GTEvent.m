@@ -42,13 +42,23 @@
                                                  if ([responseObject isKindOfClass:[NSDictionary class]]) {
                                                    NSMutableArray* events = [NSMutableArray new];
                                                    
+                                                   for (NSDictionary* eventJSON in [responseObject objectForKey:@"results"]) {
+                                                     GTEvent* event = [[GTEvent alloc] initWithDictionary:eventJSON];
+                                                     [events addObject:event];
+                                                   }
+                                                   
                                                    successBlock([events copy]);
                                                  }
                                                  
                                                  return;
                                                }
                                                failure:^(NSError *error) {
-                                                 return;
+                                                 UIAlertView* errorAlert = [[UIAlertView alloc] initWithTitle:@"Server Error"
+                                                                                                      message:error.localizedDescription
+                                                                                                     delegate:nil
+                                                                                            cancelButtonTitle:@"Ok"
+                                                                                            otherButtonTitles:nil];
+                                                 [errorAlert show];
                                                }];
   
 }
