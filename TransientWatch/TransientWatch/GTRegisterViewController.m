@@ -25,7 +25,12 @@
   UIView* navbarBackground = [[UIView alloc] initWithFrame:navigationBarFrame];
   navbarBackground.backgroundColor = [UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:0.5f];
   [self.navigationController.navigationBar addSubview:navbarBackground];
-  self.navigationController.navigationBar.translucent = YES;
+  self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"GalacticTitansLogo@2px"]];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  //  self.navigationController.navigationBar.translucent = YES;
 }
 
 - (void)didReceiveMemoryWarning {
