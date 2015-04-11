@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,19 +17,23 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//  UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:[UIViewController new]];
-//  [navController.navigationBar setBarTintColor:[UIColor blackColor]];
-//  [[UINavigationBar appearance] setTitleTextAttributes:@{
-//                                                         NSForegroundColorAttributeName : [UIColor whiteColor],
-//                                                         NSFontAttributeName : [UIFont systemFontOfSize:24.0f]
-//                                                         }];
-//  
-//  self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-//  self.window.rootViewController = navController;
-//  self.window.rootViewController.view.backgroundColor = [UIColor whiteColor];
-//  [self.window makeKeyAndVisible];
-//  
+//  [self setupNavigationController];
   return YES;
+}
+
+- (void)setupNavigationController {
+  UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];
+  navController.navigationBar.translucent = YES;
+  
+  [[UINavigationBar appearance] setTitleTextAttributes:@{
+                                                         NSForegroundColorAttributeName : [UIColor whiteColor],
+                                                         NSFontAttributeName : [UIFont systemFontOfSize:24.0f]
+                                                         }];
+  
+  self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+  self.window.rootViewController = navController;
+  self.window.rootViewController.view.backgroundColor = [UIColor whiteColor];
+  [self.window makeKeyAndVisible];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
