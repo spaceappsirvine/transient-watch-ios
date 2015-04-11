@@ -7,6 +7,7 @@
 //
 
 #import "GTEvent.h"
+#import "GTHTTPRequestOperationManager.h"
 
 @implementation GTEvent
 
@@ -14,6 +15,7 @@
   self = [super init];
   if (self) {
     self.name = [json objectForKey:@"designation"];
+    self.type = [json objectForKey:@"type"];
     self.imageURL = [NSURL URLWithString:[json objectForKey:@"image"]];
     self.rightAscension = [json objectForKey:@"ra"];
     self.declenation = [json objectForKey:@"dec"];
@@ -26,6 +28,29 @@
 
 - (NSInteger)difference {
   return self.todayReading - self.yesterdayReading;
+}
+
+#pragma mark - Network Calls
+
++ (void)fetchEvents:(GTFetchEventsSuccessBlock)successBlock failureBlock:(GTFetchEventsFailureBlock)failureBlock {
+  
+  [GTHTTPRequestOperationManager httpRequestWithMethod:GTHTTPRequestMethodGET
+                                             urlString:@""
+                                                params:nil
+                                               success:^(id responseObject) {
+                                                 
+                                                 if ([responseObject isKindOfClass:[NSDictionary class]]) {
+                                                   NSMutableArray* events = [NSMutableArray new];
+                                                   
+                                                   successBlock([events copy]);
+                                                 }
+                                                 
+                                                 return;
+                                               }
+                                               failure:^(NSError *error) {
+                                                 return;
+                                               }];
+  
 }
 
 @end
