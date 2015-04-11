@@ -23,7 +23,7 @@
   navigationBarFrame.origin.y = -20;
   navigationBarFrame.size.height += 20;
   UIView* navbarBackground = [[UIView alloc] initWithFrame:navigationBarFrame];
-  navbarBackground.backgroundColor = [UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:0.5f];
+  navbarBackground.backgroundColor = [UIColor colorWithRed:97.0f/255.0f green:66.0f/255.0f blue:141.0f/255.0f alpha:1.0f];
   [self.navigationController.navigationBar addSubview:navbarBackground];
   self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"GalacticTitansLogo@2px"]];
 }
