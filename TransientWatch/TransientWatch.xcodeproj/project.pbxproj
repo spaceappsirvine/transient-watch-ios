@@ -12,6 +12,14 @@
 		4D1D2CFD1AD8E578004598C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D2CFC1AD8E578004598C8 /* ViewController.m */; };
 		4D1D2D021AD8E578004598C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D1D2D011AD8E578004598C8 /* Images.xcassets */; };
 		4D1D2D111AD8E578004598C8 /* TransientWatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D2D101AD8E578004598C8 /* TransientWatchTests.m */; };
+		CD344E591AD9AB900012A8B3 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD344E581AD9AB900012A8B3 /* Storyboard.storyboard */; };
+		CD344E931AD9ADBD0012A8B3 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = CD344E8D1AD9ADBD0012A8B3 /* Background.png */; };
+		CD344E941AD9ADBD0012A8B3 /* DownArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = CD344E8E1AD9ADBD0012A8B3 /* DownArrow.png */; };
+		CD344E951AD9ADBD0012A8B3 /* GalacticTitansLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = CD344E8F1AD9ADBD0012A8B3 /* GalacticTitansLogo.png */; };
+		CD344E961AD9ADBD0012A8B3 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CD344E901AD9ADBD0012A8B3 /* icon.png */; };
+		CD344E971AD9ADBD0012A8B3 /* notification.png in Resources */ = {isa = PBXBuildFile; fileRef = CD344E911AD9ADBD0012A8B3 /* notification.png */; };
+		CD344E981AD9ADBD0012A8B3 /* UpArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = CD344E921AD9ADBD0012A8B3 /* UpArrow.png */; };
+		CD344E9B1AD9B03E0012A8B3 /* GTRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD344E9A1AD9B03E0012A8B3 /* GTRegisterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +44,15 @@
 		4D1D2D0A1AD8E578004598C8 /* TransientWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransientWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D1D2D0F1AD8E578004598C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D1D2D101AD8E578004598C8 /* TransientWatchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransientWatchTests.m; sourceTree = "<group>"; };
+		CD344E581AD9AB900012A8B3 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		CD344E8D1AD9ADBD0012A8B3 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
+		CD344E8E1AD9ADBD0012A8B3 /* DownArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DownArrow.png; sourceTree = "<group>"; };
+		CD344E8F1AD9ADBD0012A8B3 /* GalacticTitansLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GalacticTitansLogo.png; sourceTree = "<group>"; };
+		CD344E901AD9ADBD0012A8B3 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		CD344E911AD9ADBD0012A8B3 /* notification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notification.png; sourceTree = "<group>"; };
+		CD344E921AD9ADBD0012A8B3 /* UpArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UpArrow.png; sourceTree = "<group>"; };
+		CD344E991AD9B03E0012A8B3 /* GTRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTRegisterViewController.h; sourceTree = "<group>"; };
+		CD344E9A1AD9B03E0012A8B3 /* GTRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTRegisterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +94,16 @@
 		4D1D2CF31AD8E578004598C8 /* TransientWatch */ = {
 			isa = PBXGroup;
 			children = (
+				CD344E8C1AD9ADAD0012A8B3 /* images */,
 				4D1D2CF81AD8E578004598C8 /* AppDelegate.h */,
 				4D1D2CF91AD8E578004598C8 /* AppDelegate.m */,
 				4D1D2CFB1AD8E578004598C8 /* ViewController.h */,
 				4D1D2CFC1AD8E578004598C8 /* ViewController.m */,
 				4D1D2D011AD8E578004598C8 /* Images.xcassets */,
 				4D1D2CF41AD8E578004598C8 /* Supporting Files */,
+				CD344E581AD9AB900012A8B3 /* Storyboard.storyboard */,
+				CD344E991AD9B03E0012A8B3 /* GTRegisterViewController.h */,
+				CD344E9A1AD9B03E0012A8B3 /* GTRegisterViewController.m */,
 			);
 			path = TransientWatch;
 			sourceTree = "<group>";
@@ -111,6 +132,19 @@
 				4D1D2D0F1AD8E578004598C8 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CD344E8C1AD9ADAD0012A8B3 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				CD344E8D1AD9ADBD0012A8B3 /* Background.png */,
+				CD344E8E1AD9ADBD0012A8B3 /* DownArrow.png */,
+				CD344E8F1AD9ADBD0012A8B3 /* GalacticTitansLogo.png */,
+				CD344E901AD9ADBD0012A8B3 /* icon.png */,
+				CD344E911AD9ADBD0012A8B3 /* notification.png */,
+				CD344E921AD9ADBD0012A8B3 /* UpArrow.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +227,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD344E971AD9ADBD0012A8B3 /* notification.png in Resources */,
+				CD344E951AD9ADBD0012A8B3 /* GalacticTitansLogo.png in Resources */,
+				CD344E931AD9ADBD0012A8B3 /* Background.png in Resources */,
+				CD344E961AD9ADBD0012A8B3 /* icon.png in Resources */,
 				4D1D2D021AD8E578004598C8 /* Images.xcassets in Resources */,
+				CD344E591AD9AB900012A8B3 /* Storyboard.storyboard in Resources */,
+				CD344E981AD9ADBD0012A8B3 /* UpArrow.png in Resources */,
+				CD344E941AD9ADBD0012A8B3 /* DownArrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD344E9B1AD9B03E0012A8B3 /* GTRegisterViewController.m in Sources */,
 				4D1D2CFD1AD8E578004598C8 /* ViewController.m in Sources */,
 				4D1D2CFA1AD8E578004598C8 /* AppDelegate.m in Sources */,
 				4D1D2CF71AD8E578004598C8 /* main.m in Sources */,
@@ -395,6 +437,7 @@
 				4D1D2D161AD8E578004598C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D1D2D171AD8E578004598C8 /* Build configuration list for PBXNativeTarget "TransientWatchTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +446,7 @@
 				4D1D2D191AD8E578004598C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
