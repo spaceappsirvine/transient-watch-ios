@@ -14,7 +14,7 @@
 - (instancetype)initWithDictionary:(NSDictionary *)json {
   self = [super init];
   if (self) {
-    self.name = [json objectForKey:@"designation"];
+    self.name = [json objectForKey:@"name"];
     self.type = [json objectForKey:@"type"];
     self.imageURL = [NSURL URLWithString:[json objectForKey:@"image"]];
     self.rightAscension = [json objectForKey:@"ra"];
@@ -35,14 +35,14 @@
 + (void)fetchEvents:(GTFetchEventsSuccessBlock)successBlock failureBlock:(GTFetchEventsFailureBlock)failureBlock {
   
   [GTHTTPRequestOperationManager httpRequestWithMethod:GTHTTPRequestMethodGET
-                                             urlString:@""
+                                             urlString:@"http://galactic-titans.herokuapp.com/events"
                                                 params:nil
                                                success:^(id responseObject) {
                                                  
                                                  if ([responseObject isKindOfClass:[NSDictionary class]]) {
                                                    NSMutableArray* events = [NSMutableArray new];
                                                    
-                                                   for (NSDictionary* eventJSON in [responseObject objectForKey:@"results"]) {
+                                                   for (NSDictionary* eventJSON in [responseObject objectForKey:@"data"]) {
                                                      GTEvent* event = [[GTEvent alloc] initWithDictionary:eventJSON];
                                                      [events addObject:event];
                                                    }

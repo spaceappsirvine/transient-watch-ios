@@ -38,6 +38,7 @@
 		4D1D2D691AD9C99D004598C8 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D2D601AD9C99D004598C8 /* UIRefreshControl+AFNetworking.m */; };
 		4D1D2D6A1AD9C99D004598C8 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D2D621AD9C99D004598C8 /* UIWebView+AFNetworking.m */; };
 		4D1D2D711AD9CF1D004598C8 /* GTHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D2D701AD9CF1D004598C8 /* GTHTTPRequestOperationManager.m */; };
+		4D1D2D741AD9DD4A004598C8 /* GTRegistrationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D2D731AD9DD4A004598C8 /* GTRegistrationManager.m */; };
 		CD344E591AD9AB900012A8B3 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD344E581AD9AB900012A8B3 /* Storyboard.storyboard */; };
 		CD344E9B1AD9B03E0012A8B3 /* GTRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD344E9A1AD9B03E0012A8B3 /* GTRegisterViewController.m */; };
 /* End PBXBuildFile section */
@@ -112,6 +113,8 @@
 		4D1D2D621AD9C99D004598C8 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+AFNetworking.m"; path = "ThirdParty/UIKit+AFNetworking/UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		4D1D2D6F1AD9CF1D004598C8 /* GTHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTHTTPRequestOperationManager.h; sourceTree = "<group>"; };
 		4D1D2D701AD9CF1D004598C8 /* GTHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		4D1D2D721AD9DD4A004598C8 /* GTRegistrationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTRegistrationManager.h; sourceTree = "<group>"; };
+		4D1D2D731AD9DD4A004598C8 /* GTRegistrationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTRegistrationManager.m; sourceTree = "<group>"; };
 		CD344E581AD9AB900012A8B3 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		CD344E991AD9B03E0012A8B3 /* GTRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTRegisterViewController.h; sourceTree = "<group>"; };
 		CD344E9A1AD9B03E0012A8B3 /* GTRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTRegisterViewController.m; sourceTree = "<group>"; };
@@ -295,6 +298,8 @@
 			children = (
 				4D1D2D6F1AD9CF1D004598C8 /* GTHTTPRequestOperationManager.h */,
 				4D1D2D701AD9CF1D004598C8 /* GTHTTPRequestOperationManager.m */,
+				4D1D2D721AD9DD4A004598C8 /* GTRegistrationManager.h */,
+				4D1D2D731AD9DD4A004598C8 /* GTRegistrationManager.m */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -406,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D1D2D491AD9C971004598C8 /* AFURLConnectionOperation.m in Sources */,
+				4D1D2D741AD9DD4A004598C8 /* GTRegistrationManager.m in Sources */,
 				4D1D2D441AD9C971004598C8 /* AFHTTPRequestOperation.m in Sources */,
 				4D1D2D711AD9CF1D004598C8 /* GTHTTPRequestOperationManager.m in Sources */,
 				4D1D2D471AD9C971004598C8 /* AFNetworkReachabilityManager.m in Sources */,

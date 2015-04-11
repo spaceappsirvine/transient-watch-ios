@@ -7,6 +7,7 @@
 //
 
 #import "GTRegisterViewController.h"
+#import "GTEvent.h"
 
 @interface GTRegisterViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumTextField;
@@ -83,6 +84,11 @@
 }
 
 - (IBAction)skipButtontapped:(id)sender {
+  [GTEvent fetchEvents:^(NSArray *evenets) {
+    return;
+  } failureBlock:^(NSError *error) {
+    return;
+  }];
 }
 
 
