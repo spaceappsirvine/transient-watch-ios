@@ -12,8 +12,6 @@
 		4D1D2CFD1AD8E578004598C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D2CFC1AD8E578004598C8 /* ViewController.m */; };
 		4D1D2D021AD8E578004598C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D1D2D011AD8E578004598C8 /* Images.xcassets */; };
 		4D1D2D111AD8E578004598C8 /* TransientWatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D2D101AD8E578004598C8 /* TransientWatchTests.m */; };
-		CD344E591AD9AB900012A8B3 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD344E581AD9AB900012A8B3 /* Storyboard.storyboard */; };
-		CD344E9B1AD9B03E0012A8B3 /* GTRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD344E9A1AD9B03E0012A8B3 /* GTRegisterViewController.m */; };
 		4D1D2D1D1AD9ABA5004598C8 /* GTEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D2D1C1AD9ABA5004598C8 /* GTEvent.m */; };
 		4D1D2D271AD9B044004598C8 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D1D2D211AD9B044004598C8 /* Background.png */; };
 		4D1D2D281AD9B044004598C8 /* DownArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D1D2D221AD9B044004598C8 /* DownArrow.png */; };
@@ -21,6 +19,11 @@
 		4D1D2D2A1AD9B044004598C8 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D1D2D241AD9B044004598C8 /* icon.png */; };
 		4D1D2D2B1AD9B044004598C8 /* notification.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D1D2D251AD9B044004598C8 /* notification.png */; };
 		4D1D2D2C1AD9B044004598C8 /* UpArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D1D2D261AD9B044004598C8 /* UpArrow.png */; };
+		CD344E591AD9AB900012A8B3 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD344E581AD9AB900012A8B3 /* Storyboard.storyboard */; };
+		CD344E9B1AD9B03E0012A8B3 /* GTRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD344E9A1AD9B03E0012A8B3 /* GTRegisterViewController.m */; };
+		CD4D7BC41AD9CAD00033F9DE /* GTDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D7BC31AD9CAD00033F9DE /* GTDataViewController.m */; };
+		CD4D7BC71AD9DAE30033F9DE /* GTDataCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D7BC61AD9DAE30033F9DE /* GTDataCellTableViewCell.m */; };
+		CD4D7BC91AD9DBAA0033F9DE /* GTDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4D7BC81AD9DBAA0033F9DE /* GTDataCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,9 +48,6 @@
 		4D1D2D0A1AD8E578004598C8 /* TransientWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransientWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D1D2D0F1AD8E578004598C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D1D2D101AD8E578004598C8 /* TransientWatchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransientWatchTests.m; sourceTree = "<group>"; };
-		CD344E581AD9AB900012A8B3 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
-		CD344E991AD9B03E0012A8B3 /* GTRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTRegisterViewController.h; sourceTree = "<group>"; };
-		CD344E9A1AD9B03E0012A8B3 /* GTRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTRegisterViewController.m; sourceTree = "<group>"; };
 		4D1D2D1B1AD9ABA5004598C8 /* GTEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTEvent.h; sourceTree = "<group>"; };
 		4D1D2D1C1AD9ABA5004598C8 /* GTEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTEvent.m; sourceTree = "<group>"; };
 		4D1D2D211AD9B044004598C8 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Background.png; path = images/Background.png; sourceTree = "<group>"; };
@@ -56,6 +56,14 @@
 		4D1D2D241AD9B044004598C8 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = images/icon.png; sourceTree = "<group>"; };
 		4D1D2D251AD9B044004598C8 /* notification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = notification.png; path = images/notification.png; sourceTree = "<group>"; };
 		4D1D2D261AD9B044004598C8 /* UpArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UpArrow.png; path = images/UpArrow.png; sourceTree = "<group>"; };
+		CD344E581AD9AB900012A8B3 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		CD344E991AD9B03E0012A8B3 /* GTRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTRegisterViewController.h; sourceTree = "<group>"; };
+		CD344E9A1AD9B03E0012A8B3 /* GTRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTRegisterViewController.m; sourceTree = "<group>"; };
+		CD4D7BC21AD9CAD00033F9DE /* GTDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTDataViewController.h; sourceTree = "<group>"; };
+		CD4D7BC31AD9CAD00033F9DE /* GTDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTDataViewController.m; sourceTree = "<group>"; };
+		CD4D7BC51AD9DAE30033F9DE /* GTDataCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTDataCellTableViewCell.h; sourceTree = "<group>"; };
+		CD4D7BC61AD9DAE30033F9DE /* GTDataCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTDataCellTableViewCell.m; sourceTree = "<group>"; };
+		CD4D7BC81AD9DBAA0033F9DE /* GTDataCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTDataCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,11 @@
 				4D1D2D011AD8E578004598C8 /* Images.xcassets */,
 				4D1D2CF41AD8E578004598C8 /* Supporting Files */,
 				CD344E581AD9AB900012A8B3 /* Storyboard.storyboard */,
+				CD4D7BC51AD9DAE30033F9DE /* GTDataCellTableViewCell.h */,
+				CD4D7BC81AD9DBAA0033F9DE /* GTDataCell.xib */,
+				CD4D7BC61AD9DAE30033F9DE /* GTDataCellTableViewCell.m */,
+				CD4D7BC21AD9CAD00033F9DE /* GTDataViewController.h */,
+				CD4D7BC31AD9CAD00033F9DE /* GTDataViewController.m */,
 				CD344E991AD9B03E0012A8B3 /* GTRegisterViewController.h */,
 				CD344E9A1AD9B03E0012A8B3 /* GTRegisterViewController.m */,
 			);
@@ -241,10 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD344E971AD9ADBD0012A8B3 /* notification.png in Resources */,
-				CD344E951AD9ADBD0012A8B3 /* GalacticTitansLogo.png in Resources */,
-				CD344E931AD9ADBD0012A8B3 /* Background.png in Resources */,
-				CD344E961AD9ADBD0012A8B3 /* icon.png in Resources */,
+				CD4D7BC91AD9DBAA0033F9DE /* GTDataCell.xib in Resources */,
 				4D1D2D021AD8E578004598C8 /* Images.xcassets in Resources */,
 				CD344E591AD9AB900012A8B3 /* Storyboard.storyboard in Resources */,
 				4D1D2D2A1AD9B044004598C8 /* icon.png in Resources */,
@@ -273,7 +283,9 @@
 				CD344E9B1AD9B03E0012A8B3 /* GTRegisterViewController.m in Sources */,
 				4D1D2CFD1AD8E578004598C8 /* ViewController.m in Sources */,
 				4D1D2D1D1AD9ABA5004598C8 /* GTEvent.m in Sources */,
+				CD4D7BC41AD9CAD00033F9DE /* GTDataViewController.m in Sources */,
 				4D1D2CFA1AD8E578004598C8 /* AppDelegate.m in Sources */,
+				CD4D7BC71AD9DAE30033F9DE /* GTDataCellTableViewCell.m in Sources */,
 				4D1D2CF71AD8E578004598C8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
