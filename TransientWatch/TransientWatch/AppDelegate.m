@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,8 +17,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:[UIViewController new]];
-  [navController.navigationBar setBarTintColor:[UIColor blackColor]];
+  [self setupNavigationController];
+  return YES;
+}
+
+- (void)setupNavigationController {
+  UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];
+  navController.navigationBar.translucent = YES;
+  CGRect navigationBarFrame = navController.navigationBar.frame;
+  navigationBarFrame.origin.y = -20;
+  navigationBarFrame.size.height += 20;
+  UIView* navbarBackground = [[UIView alloc] initWithFrame:navigationBarFrame];
+  navbarBackground.backgroundColor = [UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:0.5f];
+  [navController.navigationBar addSubview:navbarBackground];
+  navController.navigationBar.translucent = YES;
+  
   [[UINavigationBar appearance] setTitleTextAttributes:@{
                                                          NSForegroundColorAttributeName : [UIColor whiteColor],
                                                          NSFontAttributeName : [UIFont systemFontOfSize:24.0f]
@@ -27,8 +41,6 @@
   self.window.rootViewController = navController;
   self.window.rootViewController.view.backgroundColor = [UIColor whiteColor];
   [self.window makeKeyAndVisible];
-  
-  return YES;
 }
 
 @end
