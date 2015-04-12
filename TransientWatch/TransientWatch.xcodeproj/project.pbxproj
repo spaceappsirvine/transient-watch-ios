@@ -40,6 +40,7 @@
 		4D1D2D711AD9CF1D004598C8 /* GTHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D2D701AD9CF1D004598C8 /* GTHTTPRequestOperationManager.m */; };
 		4D1D2D741AD9DD4A004598C8 /* GTRegistrationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D2D731AD9DD4A004598C8 /* GTRegistrationManager.m */; };
 		4D1D2D771ADA25B2004598C8 /* GTWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D2D761ADA25B2004598C8 /* GTWebViewController.m */; };
+		4D1D2D791ADADC88004598C8 /* Star.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D1D2D781ADADC88004598C8 /* Star.png */; };
 		CD344E591AD9AB900012A8B3 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD344E581AD9AB900012A8B3 /* Storyboard.storyboard */; };
 		CD344E9B1AD9B03E0012A8B3 /* GTRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD344E9A1AD9B03E0012A8B3 /* GTRegisterViewController.m */; };
 		CD4D7BC41AD9CAD00033F9DE /* GTDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D7BC31AD9CAD00033F9DE /* GTDataViewController.m */; };
@@ -122,6 +123,7 @@
 		4D1D2D731AD9DD4A004598C8 /* GTRegistrationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTRegistrationManager.m; sourceTree = "<group>"; };
 		4D1D2D751ADA25B2004598C8 /* GTWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTWebViewController.h; sourceTree = "<group>"; };
 		4D1D2D761ADA25B2004598C8 /* GTWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTWebViewController.m; sourceTree = "<group>"; };
+		4D1D2D781ADADC88004598C8 /* Star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Star.png; path = images/Star.png; sourceTree = "<group>"; };
 		CD344E581AD9AB900012A8B3 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		CD344E991AD9B03E0012A8B3 /* GTRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTRegisterViewController.h; sourceTree = "<group>"; };
 		CD344E9A1AD9B03E0012A8B3 /* GTRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTRegisterViewController.m; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 		4D1D2D1E1AD9AFBC004598C8 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				4D1D2D781ADADC88004598C8 /* Star.png */,
 				4D1D2D211AD9B044004598C8 /* Background.png */,
 				4D1D2D221AD9B044004598C8 /* DownArrow.png */,
 				4D1D2D231AD9B044004598C8 /* GalacticTitansLogo@2px.png */,
@@ -339,16 +342,6 @@
 		CD4D7BCE1ADA2DAA0033F9DE /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				CD344E581AD9AB900012A8B3 /* Storyboard.storyboard */,
-				CD4D7BCA1AD9F9DF0033F9DE /* GTImageViewController.h */,
-				CD4D7BCB1AD9F9DF0033F9DE /* GTImageViewController.m */,
-				CD4D7BC51AD9DAE30033F9DE /* GTDataCellTableViewCell.h */,
-				CD4D7BC81AD9DBAA0033F9DE /* GTDataCell.xib */,
-				CD4D7BC61AD9DAE30033F9DE /* GTDataCellTableViewCell.m */,
-				CD4D7BC21AD9CAD00033F9DE /* GTDataViewController.h */,
-				CD4D7BC31AD9CAD00033F9DE /* GTDataViewController.m */,
-				CD344E991AD9B03E0012A8B3 /* GTRegisterViewController.h */,
-				CD344E9A1AD9B03E0012A8B3 /* GTRegisterViewController.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -441,6 +434,7 @@
 				4D1D2D2C1AD9B044004598C8 /* UpArrow.png in Resources */,
 				4D1D2D2B1AD9B044004598C8 /* notification.png in Resources */,
 				4D1D2D291AD9B044004598C8 /* GalacticTitansLogo@2px.png in Resources */,
+				4D1D2D791ADADC88004598C8 /* Star.png in Resources */,
 				4D1D2D281AD9B044004598C8 /* DownArrow.png in Resources */,
 				4D1D2D271AD9B044004598C8 /* Background.png in Resources */,
 			);
