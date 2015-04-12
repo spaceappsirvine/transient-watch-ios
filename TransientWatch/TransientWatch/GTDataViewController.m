@@ -12,6 +12,7 @@
 #import "GTEvent.h"
 #import "MBProgressHUD.h"
 #import "GTImageViewController.h"
+#import "GTFavoritesViewController.h"
 
 @interface GTDataViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -84,7 +85,8 @@
 }
 
 - (void)favoritesButtonTapped:(id)sender {
-  
+  GTFavoritesViewController* favoritesVC = [self.storyboard instantiateViewControllerWithIdentifier:@"GTFavoritesViewController"];
+  [self.navigationController pushViewController:favoritesVC animated:YES];
 }
 
 - (void)getData {

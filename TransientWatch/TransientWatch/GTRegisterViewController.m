@@ -11,7 +11,7 @@
 #import "GTEvent.h"
 #import "GTRegistrationManager.h"
 
-@interface GTRegisterViewController ()
+@interface GTRegisterViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumTextField;
 @property (weak, nonatomic) IBOutlet UITextField *EmailTextField;
 @property (weak, nonatomic) IBOutlet UIButton *submitButton;
@@ -29,6 +29,10 @@
     self.submitButton.layer.cornerRadius = 12;
     self.submitButton.backgroundColor = [UIColor colorWithRed:0.404 green:0.259 blue:0.545 alpha:1];
     self.submitButton.titleLabel.textColor = [UIColor whiteColor];
+  
+  self.EmailTextField.delegate = self;
+  self.phoneNumTextField.delegate = self;
+  
 //  UIBarButtonItem* backItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"navigation-bar.back", nil)
 //                                                               style:UIBarButtonItemStylePlain
 //                                                              target:nil
@@ -41,6 +45,11 @@
                                                               target:nil
                                                               action:nil];
   [self.navigationItem setBackBarButtonItem:backItem];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+  [self submitButtontapped:nil];
+  return YES;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -111,7 +120,7 @@
     [GTRegistrationManager registerEmail:email
                           andPhoneNumber:phoneNum
                             successBlock:^{
-                              [self presentViewController:dataViewController animated:YES completion:nil];
+                              [self.navigationController pushViewController:dataViewController animated:YES];
                               return;
                             }
                             failureBlock:^{
@@ -129,18 +138,6 @@
 }
 
 - (IBAction)skipButtontapped:(id)sender {
-  [GTEvent fetchEvents:^(NSArray *evenets) {
-    return;
-  } failureBlock:^(NSError *error) {
-    return;
-  }];
-    
-    
-    
-    
-    
-    
-  
 
 }
 

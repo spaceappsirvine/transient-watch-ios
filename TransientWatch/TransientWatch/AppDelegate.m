@@ -17,6 +17,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+  if (![defaults objectForKey:@"UUID"]) {
+    NSString* uuid = [[NSUUID UUID] UUIDString];
+    [defaults setObject:uuid forKey:@"UUID"];
+    [defaults synchronize];
+  }
+  
   return YES;
 }
 
