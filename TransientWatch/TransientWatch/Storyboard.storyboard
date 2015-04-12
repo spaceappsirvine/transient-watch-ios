@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9PQ-Ni-Bhq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9PQ-Ni-Bhq">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="3sX-P7-Ngs">
-                                <rect key="frame" x="-5" y="-134" width="337" height="702"/>
+                            <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="3sX-P7-Ngs">
+                                <rect key="frame" x="-8" y="43" width="337" height="702"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5xb-8A-rld">
                                 <rect key="frame" x="30" y="184" width="248" height="30"/>
@@ -67,17 +67,11 @@
                                     <segue destination="Dyb-tB-OEo" kind="show" id="rfY-rk-d9J"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JHL-zq-HNv">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="Ung-1g-cz2"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ag1-uA-lrW" firstAttribute="top" secondItem="S1Y-PH-4g7" secondAttribute="bottom" constant="3" id="9vm-fv-Su5"/>
-                            <constraint firstItem="3sX-P7-Ngs" firstAttribute="top" secondItem="oFH-PC-jMW" secondAttribute="topMargin" constant="-134" id="EIL-OS-oCM"/>
+                            <constraint firstItem="3sX-P7-Ngs" firstAttribute="top" secondItem="oFH-PC-jMW" secondAttribute="topMargin" id="EIL-OS-oCM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3sX-P7-Ngs" secondAttribute="trailing" constant="-28" id="FMq-WD-D6M"/>
                             <constraint firstItem="roS-wA-8NK" firstAttribute="top" secondItem="5xb-8A-rld" secondAttribute="bottom" constant="48" id="ORE-3S-kz1"/>
                             <constraint firstAttribute="centerX" secondItem="S1Y-PH-4g7" secondAttribute="centerX" id="PaJ-jB-evz"/>
@@ -87,7 +81,6 @@
                             <constraint firstItem="vb0-AX-a6U" firstAttribute="top" secondItem="3sX-P7-Ngs" secondAttribute="bottom" id="gyO-2R-puc"/>
                             <constraint firstAttribute="centerX" secondItem="5xb-8A-rld" secondAttribute="centerX" id="hBr-fV-0Iu"/>
                             <constraint firstItem="S1Y-PH-4g7" firstAttribute="top" secondItem="roS-wA-8NK" secondAttribute="bottom" constant="40" id="jFF-BH-wpB"/>
-                            <constraint firstItem="5xb-8A-rld" firstAttribute="top" secondItem="JHL-zq-HNv" secondAttribute="bottom" constant="140" id="nJZ-nf-EPu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CVo-Qq-PN0"/>
@@ -113,13 +106,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="LWl-AN-evT">
-                                <rect key="frame" x="-5" y="20" width="330" height="529"/>
+                            <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="sEK-Ji-jQF">
+                                <rect key="frame" x="0.0" y="-67" width="320" height="702"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="m8v-XQ-Xq9">
-                                <rect key="frame" x="-10" y="64" width="330" height="504"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexBackgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Dyb-tB-OEo" id="wP7-ag-H88"/>
                                     <outlet property="delegate" destination="Dyb-tB-OEo" id="gGc-GZ-P04"/>
@@ -129,10 +122,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="YyA-ca-ihT" firstAttribute="top" secondItem="m8v-XQ-Xq9" secondAttribute="bottom" id="EbK-qc-foF"/>
+                            <constraint firstItem="m8v-XQ-Xq9" firstAttribute="leading" secondItem="2w8-Z2-5Bi" secondAttribute="leadingMargin" constant="-16" id="PL7-56-upF"/>
                             <constraint firstItem="m8v-XQ-Xq9" firstAttribute="top" secondItem="aqo-7q-9yp" secondAttribute="bottom" id="fEr-MR-dSA"/>
-                            <constraint firstItem="m8v-XQ-Xq9" firstAttribute="leading" secondItem="2w8-Z2-5Bi" secondAttribute="leadingMargin" constant="-26" id="xAP-Ch-Zd5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="m8v-XQ-Xq9" secondAttribute="trailing" constant="-16" id="z95-Mg-7CO"/>
+                            <constraint firstItem="m8v-XQ-Xq9" firstAttribute="leading" secondItem="2w8-Z2-5Bi" secondAttribute="leadingMargin" id="sR8-Wa-QjC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="m8v-XQ-Xq9" secondAttribute="trailing" constant="-16" id="t1h-29-Twz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="m8v-XQ-Xq9" secondAttribute="trailing" id="z95-Mg-7CO"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="sR8-Wa-QjC"/>
+                                <exclude reference="z95-Mg-7CO"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -140,6 +141,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="skX-iL-bZb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationItem id="7Th-dk-j7X"/>
             </objects>
             <point key="canvasLocation" x="148" y="329"/>
         </scene>
@@ -162,6 +164,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Background.png" width="1024" height="768"/>
+        <image name="Background.png" width="1024" height="756"/>
     </resources>
 </document>

@@ -7,13 +7,15 @@
 //
 
 #import "GTEvent.h"
+#import "GTHTTPRequestOperationManager.h"
 
 @implementation GTEvent
 
 - (instancetype)initWithDictionary:(NSDictionary *)json {
   self = [super init];
   if (self) {
-    self.name = [json objectForKey:@"designation"];
+    self.name = [json objectForKey:@"name"];
+    self.type = [json objectForKey:@"type"];
     self.imageURL = [NSURL URLWithString:[json objectForKey:@"image"]];
     self.rightAscension = [json objectForKey:@"ra"];
     self.declenation = [json objectForKey:@"dec"];
@@ -26,6 +28,40 @@
 
 - (NSInteger)difference {
   return self.todayReading - self.yesterdayReading;
+}
+
+#pragma mark - Network Calls
+
++ (void)fetchEvents:(GTFetchEventsSuccessBlock)successBlock failureBlock:(GTFetchEventsFailureBlock)failureBlock {
+  
+  [GTHTTPRequestOperationManager httpRequestWithMethod:GTHTTPRequestMethodGET
+                                             urlString:@"http://galactic-titans.herokuapp.com/events"
+                                                params:nil
+                                               success:^(id responseObject) {
+                                                 
+                                                 if ([responseObject isKindOfClass:[NSDictionary class]]) {
+                                                   NSMutableArray* events = [NSMutableArray new];
+                                                   
+                                                   for (NSDictionary* eventJSON in [responseObject objectForKey:@"data"]) {
+                                                     GTEvent* event = [[GTEvent alloc] initWithDictionary:eventJSON];
+                                                     [events addObject:event];
+                                                   }
+                                                   
+                                                   successBlock([events copy]);
+                                                 }
+                                                 
+                                                 return;
+                                               }
+                                               failure:^(NSError *error) {
+                                                 UIAlertView* errorAlert = [[UIAlertView alloc] initWithTitle:@"Server Error"
+                                                                                                      message:error.localizedDescription
+                                                                                                     delegate:nil
+                                                                                            cancelButtonTitle:@"Ok"
+                                                                                            otherButtonTitles:nil];
+                                                 [errorAlert show];
+                                                 failureBlock(error);
+                                               }];
+  
 }
 
 @end
