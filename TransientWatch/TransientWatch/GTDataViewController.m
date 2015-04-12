@@ -10,6 +10,7 @@
 #import "GTDataCellTableViewCell.h"
 #import "GTEvent.h"
 #import "MBProgressHUD.h"
+#import "GTImageViewController.h"
 
 @interface GTDataViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -29,6 +30,12 @@
     [self getData];
   
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"GalacticTitansLogo@2px"]];
+  
+    UIBarButtonItem* backItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"navigation-bar.back", nil)
+                                                               style:UIBarButtonItemStylePlain
+                                                              target:nil
+                                                              action:nil];
+    [self.navigationItem setBackBarButtonItem:backItem];
 
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
   
@@ -128,7 +135,10 @@
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    self.navigationController pushViewController:<#(UIViewController *)#> animated:<#(BOOL)#>
+  GTEvent* event = self.events[indexPath.row];
+  GTImageViewController* imageVC = [self.storyboard instantiateViewControllerWithIdentifier:@"GTImageViewController"];
+  imageVC.event = event;
+  [self.navigationController pushViewController:imageVC animated:YES];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
   return 80.0f;
