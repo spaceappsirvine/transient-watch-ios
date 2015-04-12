@@ -7,11 +7,13 @@
 //
 
 #import "GTRegisterViewController.h"
+#import "GTDataViewController.h"
 #import "GTEvent.h"
 
 @interface GTRegisterViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumTextField;
 @property (weak, nonatomic) IBOutlet UITextField *EmailTextField;
+@property (weak, nonatomic) IBOutlet UIButton *submitButton;
 
 @end
 
@@ -22,7 +24,10 @@
     // Do any additional setup after loading the view.
   self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:41.0f/255.0f green:68.0f/255.0f blue:160.0f/255.0f alpha:1.0f];
   self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"GalacticTitansLogo@2px"]];
-  
+
+    self.submitButton.layer.cornerRadius = 12;
+    self.submitButton.backgroundColor = [UIColor colorWithRed:0.404 green:0.259 blue:0.545 alpha:1];
+    self.submitButton.titleLabel.textColor = [UIColor whiteColor];
 //  UIBarButtonItem* backItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"navigation-bar.back", nil)
 //                                                               style:UIBarButtonItemStylePlain
 //                                                              target:nil
@@ -50,6 +55,27 @@
 }
 */
 
+
+-(BOOL)NSStringIsValidPhoneNumber: (NSString*)checkString{
+    
+    NSError *error = NULL;
+    NSDataDetector *detector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypePhoneNumber error:&error];
+    
+    NSRange inputRange = NSMakeRange(0, [checkString length]);
+    NSArray *matches = [detector matchesInString:checkString options:0 range:inputRange];
+        if ([matches count] == 0) {
+        return NO;
+    }
+    NSTextCheckingResult *result = (NSTextCheckingResult *)[matches objectAtIndex:0];
+    
+    if ([result resultType] == NSTextCheckingTypePhoneNumber && result.range.location == inputRange.location && result.range.length == inputRange.length) {
+        return YES;
+    }else {
+        return NO;
+    }
+    
+}
+
 -(BOOL) NSStringIsValidEmail:(NSString *)checkString
 {
     BOOL stricterFilter = NO;
@@ -66,17 +92,36 @@
 - (IBAction)submitButtontapped:(id)sender {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    NSString * username = self.phoneNumTextField.text;
-    [defaults setObject:username forKey:@"UserName"];
+    NSString * phoneNum = self.phoneNumTextField.text;
+   
     NSString * email = self.EmailTextField.text;
     
     
-    if ([self NSStringIsValidEmail:email]){
-        [defaults setObject:email forKey:@"Email"];
-    }else{
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid Email" message:@"Please enter a valid email address." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:@"Cancel", nil];
-        [alert show];
-    }
+
+        if ([self NSStringIsValidPhoneNumber:phoneNum]) {
+            [defaults setObject:phoneNum forKey:@"phoneNum"];
+            
+            
+            
+            if ([self NSStringIsValidEmail:email]){
+                [defaults setObject:email forKey:@"Email"];
+                GTDataViewController *dataViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DataViewController"];
+                [self presentViewController:dataViewController animated:YES completion:nil];
+            }else{
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid Email" message:@"Please enter a valid email address." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:@"Cancel", nil];
+                [alert show];
+                
+            }
+
+            
+            
+        }else{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid Phone Number" message:@"Please enter a valid phone number." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:@"Cancel", nil];
+            [alert show];
+        }
+
+    
+    
     
     
     [defaults synchronize];
@@ -90,6 +135,11 @@
   } failureBlock:^(NSError *error) {
     return;
   }];
+    
+    
+    
+  
+
 }
 
 

@@ -8,6 +8,7 @@
 
 #import "GTDataViewController.h"
 #import "GTDataCellTableViewCell.h"
+#import "GTImageViewController.h"
 #import "GTEvent.h"
 #import "MBProgressHUD.h"
 
@@ -128,8 +129,11 @@
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    self.navigationController pushViewController:<#(UIViewController *)#> animated:<#(BOOL)#>
+    
+    GTImageViewController* imageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"GTImageViewController"];
+    [self.navigationController pushViewController:imageViewController animated:YES];
 }
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
   return 80.0f;
 }

@@ -26,12 +26,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UITapGestureRecognizer * gestureRecognizer =[[UITapGestureRecognizer alloc] initWithTarget:self.webView action:@selector(webViewTapped:)];
+    
+    
+}
+
+
+
+-(void)webViewTapped:(UITapGestureRecognizer*)sender{
+    printf("webViewTapped");
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 /*
 #pragma mark - Navigation
