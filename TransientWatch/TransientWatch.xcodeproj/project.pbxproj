@@ -46,6 +46,9 @@
 		CD4D7BC71AD9DAE30033F9DE /* GTDataCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D7BC61AD9DAE30033F9DE /* GTDataCellTableViewCell.m */; };
 		CD4D7BC91AD9DBAA0033F9DE /* GTDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4D7BC81AD9DBAA0033F9DE /* GTDataCell.xib */; };
 		CD4D7BCC1AD9F9DF0033F9DE /* GTImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D7BCB1AD9F9DF0033F9DE /* GTImageViewController.m */; };
+		CD6E9C771ADAE72300FC5BF8 /* GTGlossaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6E9C761ADAE72300FC5BF8 /* GTGlossaryViewController.m */; };
+		CD6E9C791ADAF2FC00FC5BF8 /* questionMark30px.png in Resources */ = {isa = PBXBuildFile; fileRef = CD6E9C781ADAF2FC00FC5BF8 /* questionMark30px.png */; };
+		CD6E9C7B1ADAF84400FC5BF8 /* GTGlossaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD6E9C7A1ADAF84400FC5BF8 /* GTGlossaryCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +135,10 @@
 		CD4D7BC81AD9DBAA0033F9DE /* GTDataCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTDataCell.xib; sourceTree = "<group>"; };
 		CD4D7BCA1AD9F9DF0033F9DE /* GTImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTImageViewController.h; sourceTree = "<group>"; };
 		CD4D7BCB1AD9F9DF0033F9DE /* GTImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTImageViewController.m; sourceTree = "<group>"; };
+		CD6E9C751ADAE72300FC5BF8 /* GTGlossaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTGlossaryViewController.h; path = ../GTGlossaryViewController.h; sourceTree = "<group>"; };
+		CD6E9C761ADAE72300FC5BF8 /* GTGlossaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTGlossaryViewController.m; path = ../GTGlossaryViewController.m; sourceTree = "<group>"; };
+		CD6E9C781ADAF2FC00FC5BF8 /* questionMark30px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = questionMark30px.png; sourceTree = "<group>"; };
+		CD6E9C7A1ADAF84400FC5BF8 /* GTGlossaryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTGlossaryCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +162,7 @@
 		4D1D2CE81AD8E578004598C8 = {
 			isa = PBXGroup;
 			children = (
-				CD4D7BCD1ADA2D6B0033F9DE /* New Group */,
+				4D1D2CF31AD8E578004598C8 /* TransientWatch */,
 				4D1D2D0D1AD8E578004598C8 /* TransientWatchTests */,
 				4D1D2CF21AD8E578004598C8 /* Products */,
 				4D1D2D2F1AD9C925004598C8 /* ThirdParty */,
@@ -224,6 +231,7 @@
 		4D1D2D1E1AD9AFBC004598C8 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				CD6E9C781ADAF2FC00FC5BF8 /* questionMark30px.png */,
 				4D1D2D211AD9B044004598C8 /* Background.png */,
 				4D1D2D221AD9B044004598C8 /* DownArrow.png */,
 				4D1D2D231AD9B044004598C8 /* GalacticTitansLogo@2px.png */,
@@ -314,22 +322,17 @@
 			name = Network;
 			sourceTree = "<group>";
 		};
-		CD4D7BCD1ADA2D6B0033F9DE /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-				4D1D2CF31AD8E578004598C8 /* TransientWatch */,
-			);
-			name = "New Group";
-			sourceTree = "<group>";
-		};
 		CD4D7BCE1ADA2DAA0033F9DE /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				CD6E9C751ADAE72300FC5BF8 /* GTGlossaryViewController.h */,
+				CD6E9C761ADAE72300FC5BF8 /* GTGlossaryViewController.m */,
 				CD344E581AD9AB900012A8B3 /* Storyboard.storyboard */,
 				CD4D7BCA1AD9F9DF0033F9DE /* GTImageViewController.h */,
 				CD4D7BCB1AD9F9DF0033F9DE /* GTImageViewController.m */,
 				CD4D7BC51AD9DAE30033F9DE /* GTDataCellTableViewCell.h */,
 				CD4D7BC81AD9DBAA0033F9DE /* GTDataCell.xib */,
+				CD6E9C7A1ADAF84400FC5BF8 /* GTGlossaryCell.xib */,
 				CD4D7BC61AD9DAE30033F9DE /* GTDataCellTableViewCell.m */,
 				CD4D7BC21AD9CAD00033F9DE /* GTDataViewController.h */,
 				4D1D2CFB1AD8E578004598C8 /* ViewController.h */,
@@ -425,12 +428,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD4D7BC91AD9DBAA0033F9DE /* GTDataCell.xib in Resources */,
+				CD6E9C7B1ADAF84400FC5BF8 /* GTGlossaryCell.xib in Resources */,
 				4D1D2D021AD8E578004598C8 /* Images.xcassets in Resources */,
 				CD344E591AD9AB900012A8B3 /* Storyboard.storyboard in Resources */,
 				4D1D2D2A1AD9B044004598C8 /* icon.png in Resources */,
 				4D1D2D2C1AD9B044004598C8 /* UpArrow.png in Resources */,
 				4D1D2D2B1AD9B044004598C8 /* notification.png in Resources */,
 				4D1D2D291AD9B044004598C8 /* GalacticTitansLogo@2px.png in Resources */,
+				CD6E9C791ADAF2FC00FC5BF8 /* questionMark30px.png in Resources */,
 				4D1D2D281AD9B044004598C8 /* DownArrow.png in Resources */,
 				4D1D2D271AD9B044004598C8 /* Background.png in Resources */,
 			);
@@ -475,6 +480,7 @@
 				4D1D2D481AD9C971004598C8 /* AFSecurityPolicy.m in Sources */,
 				4D1D2D691AD9C99D004598C8 /* UIRefreshControl+AFNetworking.m in Sources */,
 				4D1D2CFA1AD8E578004598C8 /* AppDelegate.m in Sources */,
+				CD6E9C771ADAE72300FC5BF8 /* GTGlossaryViewController.m in Sources */,
 				CD4D7BC71AD9DAE30033F9DE /* GTDataCellTableViewCell.m in Sources */,
 				4D1D2CF71AD8E578004598C8 /* main.m in Sources */,
 				CD4D7BCC1AD9F9DF0033F9DE /* GTImageViewController.m in Sources */,

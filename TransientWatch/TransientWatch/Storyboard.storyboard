@@ -329,6 +329,19 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8u-jG-n1A">
+                                <rect key="frame" x="261" y="518" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4Vt-6E-spv"/>
+                                    <constraint firstAttribute="width" constant="30" id="Mnr-2P-7ek"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="questionMark30px.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vxN-7h-F6K" kind="show" id="yHa-TQ-Nxd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -346,9 +359,12 @@
                             <constraint firstItem="pTZ-Dz-xDc" firstAttribute="top" secondItem="vBX-z7-z44" secondAttribute="bottom" constant="-5" id="FD5-fk-1gO"/>
                             <constraint firstItem="4Vn-vT-jvm" firstAttribute="centerX" secondItem="Agu-bj-ryX" secondAttribute="centerX" id="Fnq-iG-YzU"/>
                             <constraint firstItem="4Vn-vT-jvm" firstAttribute="top" secondItem="Mea-TZ-OUU" secondAttribute="bottom" constant="7" id="Hs3-Q5-fP6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="X8u-jG-n1A" secondAttribute="trailing" constant="10" id="KLY-bC-78k"/>
                             <constraint firstItem="vBX-z7-z44" firstAttribute="top" secondItem="a2W-Lj-Yqb" secondAttribute="bottom" constant="15" id="M2l-68-IrZ"/>
                             <constraint firstItem="pg9-wf-wl8" firstAttribute="top" secondItem="wYd-b9-xXA" secondAttribute="bottom" constant="-2" id="PTK-70-L10"/>
                             <constraint firstAttribute="trailingMargin" secondItem="F4g-hn-BqY" secondAttribute="trailing" constant="-22" id="QLO-0L-LUZ"/>
+                            <constraint firstItem="OD8-Sv-j8a" firstAttribute="top" secondItem="X8u-jG-n1A" secondAttribute="bottom" constant="20" id="Qxy-cE-3Ww"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="X8u-jG-n1A" secondAttribute="trailing" constant="13" id="SZX-lO-CyT"/>
                             <constraint firstItem="Agu-bj-ryX" firstAttribute="leading" secondItem="evV-Vy-lNC" secondAttribute="trailing" constant="31" id="Uxe-Mw-tNQ"/>
                             <constraint firstItem="F4g-hn-BqY" firstAttribute="leading" secondItem="MXZ-qz-DNU" secondAttribute="leadingMargin" constant="-16" id="X8v-jA-r2T"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XeR-aS-3m5" secondAttribute="trailing" constant="2" id="XRk-00-Grl"/>
@@ -360,6 +376,7 @@
                             <constraint firstItem="QCN-4U-v3b" firstAttribute="leading" secondItem="4Vn-vT-jvm" secondAttribute="trailing" constant="2" id="baF-8P-um8"/>
                             <constraint firstItem="a2W-Lj-Yqb" firstAttribute="leading" secondItem="MXZ-qz-DNU" secondAttribute="leadingMargin" constant="6" id="c0e-A1-jXj"/>
                             <constraint firstItem="bEa-jb-JR0" firstAttribute="leading" secondItem="MXZ-qz-DNU" secondAttribute="leadingMargin" constant="1" id="f5Q-rz-7Bb"/>
+                            <constraint firstItem="OD8-Sv-j8a" firstAttribute="top" secondItem="X8u-jG-n1A" secondAttribute="bottom" constant="20" id="fDX-9G-vZR"/>
                             <constraint firstItem="evV-Vy-lNC" firstAttribute="leading" secondItem="Nbr-3D-EJq" secondAttribute="trailing" constant="32" id="fDc-vA-XyC"/>
                             <constraint firstItem="Agu-bj-ryX" firstAttribute="top" secondItem="pg9-wf-wl8" secondAttribute="bottom" constant="3" id="gHK-0z-9pG"/>
                             <constraint firstItem="5qA-Gr-LhA" firstAttribute="centerX" secondItem="Nbr-3D-EJq" secondAttribute="centerX" id="h9v-KM-j92"/>
@@ -395,7 +412,108 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Zm-fc-kKA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="567" y="184"/>
+            <point key="canvasLocation" x="514" y="188"/>
+        </scene>
+        <!--Glossary View Controller-->
+        <scene sceneID="xBn-eR-6gc">
+            <objects>
+                <viewController id="vxN-7h-F6K" customClass="GTGlossaryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="l1D-M2-Slz"/>
+                        <viewControllerLayoutGuide type="bottom" id="NN9-Jt-5q1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EaM-sv-Uvs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="87p-oT-D30">
+                                <rect key="frame" x="0.0" y="20" width="333" height="626"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UH2-hU-XzO">
+                                <rect key="frame" x="0.0" y="522" width="320" height="2"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rFS-fx-4eS">
+                                <rect key="frame" x="0.0" y="325" width="320" height="2"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Glossary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plf-G9-z60">
+                                <rect key="frame" x="86" y="75" width="138" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="52J-gl-Bsc"/>
+                                    <constraint firstAttribute="width" constant="138" id="6WH-Rv-fOf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Equatorial coordinate system" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axl-g9-x24">
+                                <rect key="frame" x="16" y="167" width="224" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="JGZ-2p-4zc"/>
+                                    <constraint firstAttribute="width" constant="224" id="idk-Ko-ntq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5P-jG-bdT">
+                                <rect key="frame" x="16" y="203" width="300" height="107"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="107" id="19j-it-972"/>
+                                    <constraint firstAttribute="width" constant="300" id="8v9-rm-VLQ"/>
+                                </constraints>
+                                <string key="text">The equatorial coordinate system is a widely used celestial coordinate system used to specify the positions of celestial objects.A star's spherical coordinates are often expressed as a pair, right ascension and declination, without a distance coordinate.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j0T-76-pCg">
+                                <rect key="frame" x="0.0" y="137" width="320" height="4"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Crab (unit)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLe-PP-mZ0">
+                                <rect key="frame" x="11" y="342" width="224" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="224" id="BVo-bW-GsP"/>
+                                    <constraint firstAttribute="height" constant="28" id="sLe-0d-hEC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVo-QT-hp8">
+                                <rect key="frame" x="16" y="376" width="300" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="Ynw-cX-6zz"/>
+                                    <constraint firstAttribute="width" constant="300" id="anw-5E-5fH"/>
+                                </constraints>
+                                <string key="text">A Crab is a standard astrophotometrical unit for measurement of the intensity of Astrophysical X-ray sources.[1][2][3][4] One Crab is defined as the intensity of the Crab Nebula at the corresponding X-ray photon energy.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="87p-oT-D30" firstAttribute="leading" secondItem="EaM-sv-Uvs" secondAttribute="leadingMargin" constant="-16" id="0ac-9B-ggq"/>
+                            <constraint firstItem="fVo-QT-hp8" firstAttribute="top" secondItem="dLe-PP-mZ0" secondAttribute="bottom" constant="6" id="2nw-eo-E4i"/>
+                            <constraint firstItem="dLe-PP-mZ0" firstAttribute="leading" secondItem="EaM-sv-Uvs" secondAttribute="leadingMargin" constant="-5" id="50f-yU-PXm"/>
+                            <constraint firstItem="87p-oT-D30" firstAttribute="top" secondItem="l1D-M2-Slz" secondAttribute="bottom" id="5CO-wK-hqg"/>
+                            <constraint firstItem="plf-G9-z60" firstAttribute="leading" secondItem="EaM-sv-Uvs" secondAttribute="leadingMargin" constant="70" id="5Fa-fW-pna"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="87p-oT-D30" secondAttribute="trailing" constant="-29" id="5as-Eo-9ei"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="87p-oT-D30" secondAttribute="bottom" constant="-78" id="SBq-W5-GvG"/>
+                            <constraint firstItem="Axl-g9-x24" firstAttribute="leading" secondItem="EaM-sv-Uvs" secondAttribute="leadingMargin" id="Yai-hu-r93"/>
+                            <constraint firstItem="Axl-g9-x24" firstAttribute="top" secondItem="j0T-76-pCg" secondAttribute="bottom" constant="26" id="ao3-28-2Pu"/>
+                            <constraint firstItem="dLe-PP-mZ0" firstAttribute="top" secondItem="rFS-fx-4eS" secondAttribute="bottom" constant="15" id="ewD-t1-aTc"/>
+                            <constraint firstItem="G5P-jG-bdT" firstAttribute="top" secondItem="Axl-g9-x24" secondAttribute="bottom" constant="8" id="m6w-8n-xrD"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wiM-WV-FSE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="956" y="148"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="V1W-Au-ylK">
@@ -419,5 +537,6 @@
     <resources>
         <image name="Background.png" width="1024" height="756"/>
         <image name="UpArrow.png" width="27" height="26"/>
+        <image name="questionMark30px.png" width="30" height="30"/>
     </resources>
 </document>
