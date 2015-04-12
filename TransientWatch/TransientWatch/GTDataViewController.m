@@ -131,6 +131,9 @@
       cell.arrowImageView.image = [UIImage imageNamed:@"DownArrow.png"];
     }
     
+    
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    
     return cell;
 }
 
