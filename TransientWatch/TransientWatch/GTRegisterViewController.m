@@ -7,6 +7,7 @@
 //
 
 #import "GTRegisterViewController.h"
+#import "GTEvent.h"
 
 @interface GTRegisterViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumTextField;
@@ -23,9 +24,15 @@
   navigationBarFrame.origin.y = -20;
   navigationBarFrame.size.height += 20;
   UIView* navbarBackground = [[UIView alloc] initWithFrame:navigationBarFrame];
-  navbarBackground.backgroundColor = [UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:0.5f];
+  navbarBackground.backgroundColor = [UIColor colorWithRed:41.0f/255.0f green:68.0f/255.0f blue:160.0f/255.0f alpha:1.0f];
   [self.navigationController.navigationBar addSubview:navbarBackground];
   self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"GalacticTitansLogo@2px"]];
+  
+//  UIBarButtonItem* backItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"navigation-bar.back", nil)
+//                                                               style:UIBarButtonItemStylePlain
+//                                                              target:nil
+//                                                              action:nil];
+//  [self.navigationItem setBackBarButtonItem:backItem];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -83,6 +90,11 @@
 }
 
 - (IBAction)skipButtontapped:(id)sender {
+  [GTEvent fetchEvents:^(NSArray *evenets) {
+    return;
+  } failureBlock:^(NSError *error) {
+    return;
+  }];
 }
 
 

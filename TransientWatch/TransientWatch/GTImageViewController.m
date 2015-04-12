@@ -9,6 +9,15 @@
 #import "GTImageViewController.h"
 
 @interface GTImageViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *ascentionDataLabel;
+@property (weak, nonatomic) IBOutlet UILabel *declenationDataLabel;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *todayDataLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yesterdayDataLabel;
+@property (weak, nonatomic) IBOutlet UILabel *changeDataLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *arrowLabel;
 
 @end
 
