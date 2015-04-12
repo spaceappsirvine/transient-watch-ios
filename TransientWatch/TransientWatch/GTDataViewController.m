@@ -28,14 +28,8 @@
   
     [self getData];
   
-  CGRect navigationBarFrame = self.navigationController.navigationBar.frame;
-  navigationBarFrame.origin.y = -20;
-  navigationBarFrame.size.height += 20;
-  UIView* navbarBackground = [[UIView alloc] initWithFrame:navigationBarFrame];
-  navbarBackground.backgroundColor = [UIColor colorWithRed:41.0f/255.0f green:68.0f/255.0f blue:160.0f/255.0f alpha:1.0f];
-  [self.navigationController.navigationBar addSubview:navbarBackground];
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"GalacticTitansLogo@2px"]];
-  
+
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
   
     UIView *hdr = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 300.0, 65.0)];

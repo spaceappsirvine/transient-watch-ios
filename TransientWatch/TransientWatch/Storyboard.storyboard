@@ -385,6 +385,7 @@
                         <segue destination="FHF-6T-IqN" kind="relationship" relationship="rootViewController" id="3Qk-1a-BL4"/>
                     </connections>
                 </navigationController>
+                <navigationItem id="A5C-Rc-D0k"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VII-zQ-s7l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-651" y="270"/>

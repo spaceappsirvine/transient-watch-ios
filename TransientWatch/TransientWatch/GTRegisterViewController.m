@@ -20,12 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-  CGRect navigationBarFrame = self.navigationController.navigationBar.frame;
-  navigationBarFrame.origin.y = -20;
-  navigationBarFrame.size.height += 20;
-  UIView* navbarBackground = [[UIView alloc] initWithFrame:navigationBarFrame];
-  navbarBackground.backgroundColor = [UIColor colorWithRed:41.0f/255.0f green:68.0f/255.0f blue:160.0f/255.0f alpha:1.0f];
-  [self.navigationController.navigationBar addSubview:navbarBackground];
+  self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:41.0f/255.0f green:68.0f/255.0f blue:160.0f/255.0f alpha:1.0f];
   self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"GalacticTitansLogo@2px"]];
   
 //  UIBarButtonItem* backItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"navigation-bar.back", nil)
