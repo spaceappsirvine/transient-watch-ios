@@ -49,7 +49,7 @@
     [headerLabel setFont:[UIFont boldSystemFontOfSize:17.0]];
     headerLabel.textColor = [UIColor whiteColor];
     
-    UIButton* favoritesButton = [[UIButton alloc] initWithFrame:CGRectMake(270, 3, 30, 30)];
+    UIButton* favoritesButton = [[UIButton alloc] initWithFrame:CGRectMake(270, 5, 30, 30)];
     [favoritesButton setImage:[UIImage imageNamed:@"Star.png"] forState:UIControlStateNormal];
     [favoritesButton addTarget:self action:@selector(favoritesButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
   

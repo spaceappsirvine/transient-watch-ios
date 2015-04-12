@@ -94,8 +94,8 @@ NSString* const imageBaseURL = @"http://galactic-titans.herokuapp.com/preview?lo
   self.dateLabel.text = [dateFormatter stringFromDate:[NSDate date]];
   
   [MBProgressHUD showHUDAddedTo:self.imageView animated:YES];
-  NSString* theURL = [[NSString stringWithFormat:@"%@%@", imageBaseURL, self.event.name] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-  [self.imageView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:theURL]]
+  NSString* imageURL = [[NSString stringWithFormat:@"%@%@", imageBaseURL, self.event.name] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+  [self.imageView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:imageURL]]
                         placeholderImage:nil
                                  success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
                                    [MBProgressHUD hideAllHUDsForView:self.imageView animated:YES];
