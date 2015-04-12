@@ -40,32 +40,36 @@
 
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
   
-    UIView *hdr = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 300.0, 65.0)];
+    UIView *hdr = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 300.0, 70.0)];
     [hdr setBackgroundColor:[UIColor clearColor]];
     
-    UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.8, 0.0, 300.0, 30.0)];
-    headerLabel.text = @"    Recent Changes/Notifications:";
+    UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 3.0, 300.0, 30.0)];
+    headerLabel.text = @"    Recent Changes:";
     [headerLabel setFont:[UIFont boldSystemFontOfSize:17.0]];
     headerLabel.textColor = [UIColor whiteColor];
     
-    
-    
-    UILabel *designationLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.8, 20.0, 300.0, 45.0)];
+    UIButton* favoritesButton = [[UIButton alloc] initWithFrame:CGRectMake(270, 3, 30, 30)];
+    [favoritesButton setImage:[UIImage imageNamed:@"Star.png"] forState:UIControlStateNormal];
+    [favoritesButton addTarget:self action:@selector(favoritesButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+  
+  
+    UILabel *designationLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.8, 25.0, 300.0, 45.0)];
     designationLabel.numberOfLines = 2;
     designationLabel.text = @"     Name\n     Type";
     [designationLabel setFont:[UIFont boldSystemFontOfSize:13.0]];
     designationLabel.textColor = [UIColor yellowColor];
     
     
-    UILabel *changeLabel = [[UILabel alloc] initWithFrame:CGRectMake(230.0, 25.0, 300.0, 30.0)];
+    UILabel *changeLabel = [[UILabel alloc] initWithFrame:CGRectMake(230.0, 30.0, 300.0, 30.0)];
     changeLabel.text = @"     Change";
     [changeLabel setFont:[UIFont boldSystemFontOfSize:13.0]];
     changeLabel.textColor = [UIColor yellowColor];
     
     
-    UIView *seperatorView = [[UIView alloc] initWithFrame:CGRectMake(10.0, 63, self.view.frame.size.width - 20.0f, 1)];
+    UIView *seperatorView = [[UIView alloc] initWithFrame:CGRectMake(10.0, 68, self.view.frame.size.width - 20.0f, 1)];
     seperatorView.backgroundColor = [UIColor whiteColor];
-    
+  
+    [hdr addSubview:favoritesButton];
     [hdr addSubview:seperatorView];
     [hdr addSubview:designationLabel];
     [hdr addSubview:headerLabel];
@@ -77,6 +81,10 @@
     
     backgroundImageView.image = [UIImage imageNamed:@"Background"];
     [self.tableView setBackgroundView:backgroundImageView];
+}
+
+- (void)favoritesButtonTapped:(id)sender {
+  
 }
 
 - (void)getData {
