@@ -149,7 +149,7 @@
             </objects>
             <point key="canvasLocation" x="148" y="329"/>
         </scene>
-        <!--GTImageViewController-->
+        <!--Image View Controller-->
         <scene sceneID="yTD-Om-Zyi">
             <objects>
                 <viewController storyboardIdentifier="GTImageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZYo-ss-Dfp" customClass="GTImageViewController" sceneMemberID="viewController">
@@ -162,7 +162,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="F4g-hn-BqY">
-                                <rect key="frame" x="0.0" y="60" width="326" height="514"/>
+                                <rect key="frame" x="0.0" y="60" width="326" height="524"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gv3-DD-tvf">
                                 <rect key="frame" x="20" y="508" width="274" height="2"/>
@@ -327,7 +327,7 @@
                             <constraint firstItem="5qA-Gr-LhA" firstAttribute="leading" secondItem="MXZ-qz-DNU" secondAttribute="leadingMargin" constant="34" id="3h4-GP-Pvm"/>
                             <constraint firstItem="pg9-wf-wl8" firstAttribute="top" secondItem="wYd-b9-xXA" secondAttribute="bottom" constant="3" id="5tt-LT-Ifn"/>
                             <constraint firstItem="OMf-mD-fs4" firstAttribute="top" secondItem="Mea-TZ-OUU" secondAttribute="bottom" constant="6" id="7Fi-RM-EdQ"/>
-                            <constraint firstItem="OD8-Sv-j8a" firstAttribute="top" secondItem="F4g-hn-BqY" secondAttribute="bottom" constant="4" id="9F4-dC-mcz"/>
+                            <constraint firstItem="OD8-Sv-j8a" firstAttribute="top" secondItem="F4g-hn-BqY" secondAttribute="bottom" id="9F4-dC-mcz"/>
                             <constraint firstItem="9VN-Q5-Zs6" firstAttribute="top" secondItem="2wP-f5-elH" secondAttribute="bottom" constant="-7" id="9qo-SK-jfg"/>
                             <constraint firstItem="4Vn-vT-jvm" firstAttribute="centerY" secondItem="QCN-4U-v3b" secondAttribute="centerY" id="AEd-oY-f4J"/>
                             <constraint firstItem="QCN-4U-v3b" firstAttribute="top" secondItem="Mea-TZ-OUU" secondAttribute="bottom" constant="11" id="CTn-6D-n5H"/>
@@ -345,7 +345,7 @@
                             <constraint firstItem="a2W-Lj-Yqb" firstAttribute="top" secondItem="ELV-a3-Chb" secondAttribute="bottom" constant="10" id="ZLV-Lt-Zib"/>
                             <constraint firstItem="OMf-mD-fs4" firstAttribute="leading" secondItem="5qA-Gr-LhA" secondAttribute="trailing" constant="47" id="Zxi-Xr-MuV"/>
                             <constraint firstItem="XeR-aS-3m5" firstAttribute="top" secondItem="ELV-a3-Chb" secondAttribute="bottom" constant="42" id="aQY-HM-OS1"/>
-                            <constraint firstItem="QCN-4U-v3b" firstAttribute="leading" secondItem="4Vn-vT-jvm" secondAttribute="trailing" constant="15" id="baF-8P-um8"/>
+                            <constraint firstItem="QCN-4U-v3b" firstAttribute="leading" secondItem="4Vn-vT-jvm" secondAttribute="trailing" constant="2" id="baF-8P-um8"/>
                             <constraint firstItem="a2W-Lj-Yqb" firstAttribute="leading" secondItem="MXZ-qz-DNU" secondAttribute="leadingMargin" constant="6" id="c0e-A1-jXj"/>
                             <constraint firstItem="bEa-jb-JR0" firstAttribute="leading" secondItem="MXZ-qz-DNU" secondAttribute="leadingMargin" constant="1" id="f5Q-rz-7Bb"/>
                             <constraint firstItem="evV-Vy-lNC" firstAttribute="leading" secondItem="Nbr-3D-EJq" secondAttribute="trailing" constant="32" id="fDc-vA-XyC"/>

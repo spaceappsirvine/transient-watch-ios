@@ -21,10 +21,23 @@
   self = [super init];
   if (self) {
     self.url = url;
-    [self setupWebView];
   }
   
   return self;
+}
+
+- (void)viewDidLoad {
+  [super viewDidLoad];
+  
+  self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"GalacticTitansLogo@2px"]];
+  
+  UIBarButtonItem* backItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"navigation-bar.back", nil)
+                                                               style:UIBarButtonItemStylePlain
+                                                              target:nil
+                                                              action:nil];
+  [self.navigationItem setBackBarButtonItem:backItem];
+  
+  [self setupWebView];
 }
 
 - (void)setupWebView {
@@ -32,6 +45,7 @@
   self.webView.frame = self.view.bounds;
   
   [self.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
+  [self.view addSubview:self.webView];
 }
 
 @end

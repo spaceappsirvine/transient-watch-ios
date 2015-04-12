@@ -11,7 +11,7 @@
 
 NSString* const urlBase = @"http://galactic-titans.herokuapp.com/map?location=";
 
-@interface GTImageViewController ()
+@interface GTImageViewController () <UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *ascentionDataLabel;
 @property (weak, nonatomic) IBOutlet UILabel *declenationDataLabel;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
@@ -42,15 +42,17 @@ NSString* const urlBase = @"http://galactic-titans.herokuapp.com/map?location=";
   
   [self style];
     // Do any additional setup after loading the view.
-    UITapGestureRecognizer * gestureRecognizer =[[UITapGestureRecognizer alloc] initWithTarget:self.webView action:@selector(webViewTapped:)];
-    
-    
+    UITapGestureRecognizer * gestureRecognizer =[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(webViewTapped:)];
+  [self.view addGestureRecognizer:gestureRecognizer];
 }
 
 
 
 -(void)webViewTapped:(UITapGestureRecognizer*)sender{
-    printf("webViewTapped");
+  NSString* webViewURL = [[NSString stringWithFormat:@"%@%@", urlBase, self.event.name] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+  GTWebViewController* webViewController = [[GTWebViewController alloc] initWithURL:[NSURL URLWithString:webViewURL]];
+  webViewController.view.frame = self.view.bounds;
+  [self.navigationController pushViewController:webViewController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
