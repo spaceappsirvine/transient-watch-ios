@@ -39,6 +39,7 @@
 		4D1D2D6A1AD9C99D004598C8 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D2D621AD9C99D004598C8 /* UIWebView+AFNetworking.m */; };
 		4D1D2D711AD9CF1D004598C8 /* GTHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D2D701AD9CF1D004598C8 /* GTHTTPRequestOperationManager.m */; };
 		4D1D2D741AD9DD4A004598C8 /* GTRegistrationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D2D731AD9DD4A004598C8 /* GTRegistrationManager.m */; };
+		4D1D2D771ADA25B2004598C8 /* GTWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D2D761ADA25B2004598C8 /* GTWebViewController.m */; };
 		CD344E591AD9AB900012A8B3 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD344E581AD9AB900012A8B3 /* Storyboard.storyboard */; };
 		CD344E9B1AD9B03E0012A8B3 /* GTRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD344E9A1AD9B03E0012A8B3 /* GTRegisterViewController.m */; };
 		CD4D7BC41AD9CAD00033F9DE /* GTDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D7BC31AD9CAD00033F9DE /* GTDataViewController.m */; };
@@ -119,6 +120,8 @@
 		4D1D2D701AD9CF1D004598C8 /* GTHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTHTTPRequestOperationManager.m; sourceTree = "<group>"; };
 		4D1D2D721AD9DD4A004598C8 /* GTRegistrationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTRegistrationManager.h; sourceTree = "<group>"; };
 		4D1D2D731AD9DD4A004598C8 /* GTRegistrationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTRegistrationManager.m; sourceTree = "<group>"; };
+		4D1D2D751ADA25B2004598C8 /* GTWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTWebViewController.h; sourceTree = "<group>"; };
+		4D1D2D761ADA25B2004598C8 /* GTWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTWebViewController.m; sourceTree = "<group>"; };
 		CD344E581AD9AB900012A8B3 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		CD344E991AD9B03E0012A8B3 /* GTRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTRegisterViewController.h; sourceTree = "<group>"; };
 		CD344E9A1AD9B03E0012A8B3 /* GTRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTRegisterViewController.m; sourceTree = "<group>"; };
@@ -181,6 +184,18 @@
 				4D1D2CFC1AD8E578004598C8 /* ViewController.m */,
 				4D1D2D011AD8E578004598C8 /* Images.xcassets */,
 				4D1D2CF41AD8E578004598C8 /* Supporting Files */,
+				CD344E581AD9AB900012A8B3 /* Storyboard.storyboard */,
+				CD4D7BCA1AD9F9DF0033F9DE /* GTImageViewController.h */,
+				CD4D7BCB1AD9F9DF0033F9DE /* GTImageViewController.m */,
+				CD4D7BC51AD9DAE30033F9DE /* GTDataCellTableViewCell.h */,
+				CD4D7BC81AD9DBAA0033F9DE /* GTDataCell.xib */,
+				CD4D7BC61AD9DAE30033F9DE /* GTDataCellTableViewCell.m */,
+				CD4D7BC21AD9CAD00033F9DE /* GTDataViewController.h */,
+				CD4D7BC31AD9CAD00033F9DE /* GTDataViewController.m */,
+				CD344E991AD9B03E0012A8B3 /* GTRegisterViewController.h */,
+				CD344E9A1AD9B03E0012A8B3 /* GTRegisterViewController.m */,
+				4D1D2D751ADA25B2004598C8 /* GTWebViewController.h */,
+				4D1D2D761ADA25B2004598C8 /* GTWebViewController.m */,
 			);
 			path = TransientWatch;
 			sourceTree = "<group>";
@@ -462,6 +477,7 @@
 				4D1D2D671AD9C99D004598C8 /* UIImageView+AFNetworking.m in Sources */,
 				4D1D2D1D1AD9ABA5004598C8 /* GTEvent.m in Sources */,
 				CD4D7BC41AD9CAD00033F9DE /* GTDataViewController.m in Sources */,
+				4D1D2D771ADA25B2004598C8 /* GTWebViewController.m in Sources */,
 				4D1D2D451AD9C971004598C8 /* AFHTTPRequestOperationManager.m in Sources */,
 				4D1D2D651AD9C99D004598C8 /* UIAlertView+AFNetworking.m in Sources */,
 				4D1D2D6A1AD9C99D004598C8 /* UIWebView+AFNetworking.m in Sources */,

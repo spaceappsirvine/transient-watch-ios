@@ -77,11 +77,6 @@
     
     backgroundImageView.image = [UIImage imageNamed:@"Background"];
     [self.tableView setBackgroundView:backgroundImageView];
-    
-    
-    
-    
-    tableData = [NSArray arrayWithObjects:@"Egg Benedict", @"Mushroom Risotto", @"Full Breakfast", @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut", @"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQ Pork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry Birds Cake", @"Ham and Cheese Panini", nil];
 }
 
 - (void)getData {
@@ -130,10 +125,10 @@
     } else {
       cell.arrowImageView.image = [UIImage imageNamed:@"DownArrow.png"];
     }
-    
-    
-    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-    
+
+  
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+  
     return cell;
 }
 
