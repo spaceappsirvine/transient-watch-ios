@@ -9,6 +9,7 @@
 #import "GTRegisterViewController.h"
 #import "GTDataViewController.h"
 #import "GTEvent.h"
+#import "GTRegistrationManager.h"
 
 @interface GTRegisterViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumTextField;
@@ -102,26 +103,29 @@
     NSString * phoneNum = self.phoneNumTextField.text;
    
     NSString * email = self.EmailTextField.text;
+  if ([self NSStringIsValidEmail:email]){
+    [defaults setObject:email forKey:@"Email"];
+    [defaults setObject:phoneNum forKey:@"phoneNum"];
+    GTDataViewController *dataViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DataViewController"];
     
-            
-            
-            if ([self NSStringIsValidEmail:email]){
-                [defaults setObject:email forKey:@"Email"];
-                 [defaults setObject:phoneNum forKey:@"phoneNum"];
-                GTDataViewController *dataViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DataViewController"];
-                [self presentViewController:dataViewController animated:YES completion:nil];
-            }else{
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid Email" message:@"Please enter a valid email address." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:@"Cancel", nil];
-                [alert show];
-                
-            }
-
+    [GTRegistrationManager registerEmail:email
+                          andPhoneNumber:phoneNum
+                            successBlock:^{
+                              [self presentViewController:dataViewController animated:YES completion:nil];
+                              return;
+                            }
+                            failureBlock:^{
+                              return;
+                            }];
+  }else{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid Email" message:@"Please enter a valid email address." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:@"Cancel", nil];
+    [alert show];
     
-    
-    
+  }
+  
     [defaults synchronize];
-    
-    
+  
+  
 }
 
 - (IBAction)skipButtontapped:(id)sender {

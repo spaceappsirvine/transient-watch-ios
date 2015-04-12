@@ -45,7 +45,7 @@ NSString* const imageBaseURL = @"http://galactic-titans.herokuapp.com/preview?lo
   [self style];
     // Do any additional setup after loading the view.
     UITapGestureRecognizer * gestureRecognizer =[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageViewTapped:)];
-  [self.imageView addGestureRecognizer:gestureRecognizer];
+  [self.view addGestureRecognizer:gestureRecognizer];
 }
 
 
@@ -70,6 +70,9 @@ NSString* const imageBaseURL = @"http://galactic-titans.herokuapp.com/preview?lo
   self.yesterdayDataLabel.text = [NSString stringWithFormat:@"%ld", (long)self.event.yesterdayReading];
   self.changeDataLabel.text = [NSString stringWithFormat:@"%ld", (long)self.event.difference];
   NSString* theURL = [[NSString stringWithFormat:@"%@%@", imageBaseURL, self.event.name] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+  NSDateFormatter* dateFormatter = [NSDateFormatter new];
+  dateFormatter.dateFormat = @"MMMM, dd";
+  self.dateLabel.text = [dateFormatter stringFromDate:[NSDate date]];
   [self.imageView setImageWithURL:[NSURL URLWithString:theURL]];
   if (self.event.difference >= 0) {
     self.arrowLabel.image = [UIImage imageNamed:@"UpArrow"];
@@ -77,7 +80,5 @@ NSString* const imageBaseURL = @"http://galactic-titans.herokuapp.com/preview?lo
     self.arrowLabel.image = [UIImage imageNamed:@"DownArrow"];
   }
 }
-
-
 
 @end

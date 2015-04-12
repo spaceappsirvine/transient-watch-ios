@@ -70,6 +70,12 @@
                                     <segue destination="Dyb-tB-OEo" kind="show" id="rfY-rk-d9J"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter an email and/or phone number to receive notifications of exciting events. " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="282" translatesAutoresizingMaskIntoConstraints="NO" id="dff-Ha-Gjd">
+                                <rect key="frame" x="29" y="104" width="262" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -317,6 +323,12 @@
                                     <constraint firstAttribute="width" constant="250" id="o9k-ZX-Rt5"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YGW-Wd-AX9">
+                                <rect key="frame" x="43" y="154" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="06k-EA-X22">
+                                <rect key="frame" x="53" y="164" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -325,7 +337,7 @@
                             <constraint firstItem="4Vn-vT-jvm" firstAttribute="centerY" secondItem="5qA-Gr-LhA" secondAttribute="centerY" id="3aH-Bm-hp0"/>
                             <constraint firstItem="5qA-Gr-LhA" firstAttribute="leading" secondItem="MXZ-qz-DNU" secondAttribute="leadingMargin" constant="34" id="3h4-GP-Pvm"/>
                             <constraint firstItem="pg9-wf-wl8" firstAttribute="top" secondItem="wYd-b9-xXA" secondAttribute="bottom" constant="3" id="5tt-LT-Ifn"/>
-                            <constraint firstItem="j5x-Hg-Og3" firstAttribute="top" secondItem="bEa-jb-JR0" secondAttribute="bottom" constant="20" id="6wO-sy-X69"/>
+                            <constraint firstItem="j5x-Hg-Og3" firstAttribute="top" secondItem="bEa-jb-JR0" secondAttribute="bottom" constant="10" id="6wO-sy-X69"/>
                             <constraint firstItem="OMf-mD-fs4" firstAttribute="top" secondItem="Mea-TZ-OUU" secondAttribute="bottom" constant="6" id="7Fi-RM-EdQ"/>
                             <constraint firstItem="OD8-Sv-j8a" firstAttribute="top" secondItem="F4g-hn-BqY" secondAttribute="bottom" id="9F4-dC-mcz"/>
                             <constraint firstItem="9VN-Q5-Zs6" firstAttribute="top" secondItem="2wP-f5-elH" secondAttribute="bottom" constant="-7" id="9qo-SK-jfg"/>
