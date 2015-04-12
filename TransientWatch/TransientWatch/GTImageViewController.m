@@ -42,13 +42,21 @@ NSString* const urlBase = @"http://galactic-titans.herokuapp.com/map?location=";
   
   [self style];
     // Do any additional setup after loading the view.
+    UITapGestureRecognizer * gestureRecognizer =[[UITapGestureRecognizer alloc] initWithTarget:self.webView action:@selector(webViewTapped:)];
+    
+    
+}
+
+
+
+-(void)webViewTapped:(UITapGestureRecognizer*)sender{
+    printf("webViewTapped");
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 - (void)style {
   self.nameLabel.text = self.event.name;
   self.typeLabel.text = self.event.type;

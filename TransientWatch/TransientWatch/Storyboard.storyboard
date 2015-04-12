@@ -37,16 +37,18 @@
                                     <constraint firstAttribute="height" constant="30" id="a1A-jQ-IYC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1Y-PH-4g7">
                                 <rect key="frame" x="97" y="332" width="114" height="44"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="114" id="70o-R4-qbX"/>
                                     <constraint firstAttribute="height" constant="44" id="uZI-eW-1yW"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -61,6 +63,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Skip -&gt;">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -88,6 +91,7 @@
                     <connections>
                         <outlet property="EmailTextField" destination="roS-wA-8NK" id="GrM-Yg-Y82"/>
                         <outlet property="phoneNumTextField" destination="5xb-8A-rld" id="Fxf-Rc-7UN"/>
+                        <outlet property="submitButton" destination="S1Y-PH-4g7" id="2Lx-ep-mUa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZU-w6-BFY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -97,7 +101,7 @@
         <!--Data View Controller-->
         <scene sceneID="nEH-7U-cBs">
             <objects>
-                <viewController id="Dyb-tB-OEo" customClass="GTDataViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DataViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dyb-tB-OEo" customClass="GTDataViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aqo-7q-9yp"/>
                         <viewControllerLayoutGuide type="bottom" id="YyA-ca-ihT"/>
@@ -145,7 +149,7 @@
             </objects>
             <point key="canvasLocation" x="148" y="329"/>
         </scene>
-        <!--Image View Controller-->
+        <!--GTImageViewController-->
         <scene sceneID="yTD-Om-Zyi">
             <objects>
                 <viewController storyboardIdentifier="GTImageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZYo-ss-Dfp" customClass="GTImageViewController" sceneMemberID="viewController">
