@@ -7,8 +7,9 @@
 //
 
 #import "GTWebViewController.h"
+#import "MBProgressHUD.h"
 
-@interface GTWebViewController ()
+@interface GTWebViewController () <UIWebViewDelegate>
 
 @property(strong, nonatomic) UIWebView* webView;
 @property(strong, nonatomic) NSURL* url;
@@ -40,14 +41,31 @@
   [self.navigationItem setBackBarButtonItem:backItem];
   
   [self setupWebView];
+  [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 }
 
 - (void)setupWebView {
   self.webView = [UIWebView new];
+  self.webView.delegate = self;
   self.webView.frame = self.view.bounds;
   
   [self.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
   [self.view addSubview:self.webView];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+  [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+  [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+  
+  UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                  message:error.localizedDescription
+                                                 delegate:nil
+                                        cancelButtonTitle:@"Ok"
+                                        otherButtonTitles:nil];
+  [alert show];
 }
 
 @end
