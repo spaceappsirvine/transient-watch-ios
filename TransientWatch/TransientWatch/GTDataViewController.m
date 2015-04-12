@@ -98,7 +98,9 @@
 }
 
 
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    self.navigationController pushViewController:<#(UIViewController *)#> animated:<#(BOOL)#>
+}
 
 #pragma mark - Navigation
 

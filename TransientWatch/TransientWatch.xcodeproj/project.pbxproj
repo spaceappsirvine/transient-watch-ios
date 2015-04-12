@@ -24,6 +24,7 @@
 		CD4D7BC41AD9CAD00033F9DE /* GTDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D7BC31AD9CAD00033F9DE /* GTDataViewController.m */; };
 		CD4D7BC71AD9DAE30033F9DE /* GTDataCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D7BC61AD9DAE30033F9DE /* GTDataCellTableViewCell.m */; };
 		CD4D7BC91AD9DBAA0033F9DE /* GTDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4D7BC81AD9DBAA0033F9DE /* GTDataCell.xib */; };
+		CD4D7BCC1AD9F9DF0033F9DE /* GTImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4D7BCB1AD9F9DF0033F9DE /* GTImageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		CD4D7BC51AD9DAE30033F9DE /* GTDataCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTDataCellTableViewCell.h; sourceTree = "<group>"; };
 		CD4D7BC61AD9DAE30033F9DE /* GTDataCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTDataCellTableViewCell.m; sourceTree = "<group>"; };
 		CD4D7BC81AD9DBAA0033F9DE /* GTDataCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTDataCell.xib; sourceTree = "<group>"; };
+		CD4D7BCA1AD9F9DF0033F9DE /* GTImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTImageViewController.h; sourceTree = "<group>"; };
+		CD4D7BCB1AD9F9DF0033F9DE /* GTImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTImageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 				4D1D2D011AD8E578004598C8 /* Images.xcassets */,
 				4D1D2CF41AD8E578004598C8 /* Supporting Files */,
 				CD344E581AD9AB900012A8B3 /* Storyboard.storyboard */,
+				CD4D7BCA1AD9F9DF0033F9DE /* GTImageViewController.h */,
+				CD4D7BCB1AD9F9DF0033F9DE /* GTImageViewController.m */,
 				CD4D7BC51AD9DAE30033F9DE /* GTDataCellTableViewCell.h */,
 				CD4D7BC81AD9DBAA0033F9DE /* GTDataCell.xib */,
 				CD4D7BC61AD9DAE30033F9DE /* GTDataCellTableViewCell.m */,
@@ -287,6 +292,7 @@
 				4D1D2CFA1AD8E578004598C8 /* AppDelegate.m in Sources */,
 				CD4D7BC71AD9DAE30033F9DE /* GTDataCellTableViewCell.m in Sources */,
 				4D1D2CF71AD8E578004598C8 /* main.m in Sources */,
+				CD4D7BCC1AD9F9DF0033F9DE /* GTImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
