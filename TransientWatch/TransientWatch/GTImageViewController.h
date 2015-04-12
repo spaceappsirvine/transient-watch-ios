@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GTEvent.h"
 
 @interface GTImageViewController : UIViewController
+
+@property (strong, nonatomic) GTEvent* event;
 
 @end

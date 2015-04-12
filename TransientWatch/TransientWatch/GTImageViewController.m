@@ -18,6 +18,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *yesterdayDataLabel;
 @property (weak, nonatomic) IBOutlet UILabel *changeDataLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *arrowLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *typeLabel;
+
 
 @end
 
@@ -25,6 +28,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
+  [self style];
     // Do any additional setup after loading the view.
     UITapGestureRecognizer * gestureRecognizer =[[UITapGestureRecognizer alloc] initWithTarget:self.webView action:@selector(webViewTapped:)];
     
@@ -41,8 +46,20 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
+- (void)style {
+  self.nameLabel.text = self.event.name;
+  self.typeLabel.text = self.event.type;
+  self.ascentionDataLabel.text = self.event.rightAscension;
+  self.declenationDataLabel.text = self.event.declenation;
+  self.todayDataLabel.text = [NSString stringWithFormat:@"%ld", (long)self.event.todayReading];
+  self.yesterdayDataLabel.text = [NSString stringWithFormat:@"%ld", (long)self.event.yesterdayReading];
+  self.changeDataLabel.text = [NSString stringWithFormat:@"%ld", (long)self.event.difference];
+  if (self.event.difference >= 0) {
+    self.arrowLabel.image = [UIImage imageNamed:@"UpArrow"];
+  } else {
+    self.arrowLabel.image = [UIImage imageNamed:@"DownArrow"];
+  }
+}
 
 /*
 #pragma mark - Navigation

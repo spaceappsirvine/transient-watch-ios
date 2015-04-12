@@ -33,6 +33,13 @@
 //                                                              target:nil
 //                                                              action:nil];
 //  [self.navigationItem setBackBarButtonItem:backItem];
+
+  
+  UIBarButtonItem* backItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"navigation-bar.back", nil)
+                                                               style:UIBarButtonItemStylePlain
+                                                              target:nil
+                                                              action:nil];
+  [self.navigationItem setBackBarButtonItem:backItem];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
