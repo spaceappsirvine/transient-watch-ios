@@ -17,7 +17,6 @@ NSString* const imageBaseURL = @"http://galactic-titans.herokuapp.com/preview?lo
 @property (weak, nonatomic) IBOutlet UILabel *ascentionDataLabel;
 @property (weak, nonatomic) IBOutlet UILabel *declenationDataLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
-
 @property (weak, nonatomic) IBOutlet UILabel *todayDataLabel;
 @property (weak, nonatomic) IBOutlet UILabel *yesterdayDataLabel;
 @property (weak, nonatomic) IBOutlet UILabel *changeDataLabel;
@@ -25,7 +24,7 @@ NSString* const imageBaseURL = @"http://galactic-titans.herokuapp.com/preview?lo
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *typeLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-
+@property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
 
 @end
 
@@ -46,6 +45,19 @@ NSString* const imageBaseURL = @"http://galactic-titans.herokuapp.com/preview?lo
     // Do any additional setup after loading the view.
     UITapGestureRecognizer * gestureRecognizer =[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageViewTapped:)];
   [self.view addGestureRecognizer:gestureRecognizer];
+    
+    
+    
+    
+    self.favoriteButton.layer.cornerRadius = 10;
+    self.favoriteButton.backgroundColor = [UIColor colorWithRed:0.404 green:0.259 blue:0.545 alpha:1];
+    UIImage *favoriteButtonImage = [UIImage imageNamed:@"image.png"];
+    [self.favoriteButton setImage:favoriteButtonImage forState:UIControlStateNormal];
+    
+    UIImage *favoriteButtonImageHighlighted = [UIImage imageNamed:@"image.png"];
+    [self.favoriteButton setImage:favoriteButtonImageHighlighted forState:UIControlStateHighlighted];
+    
+    
 }
 
 

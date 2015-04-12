@@ -180,22 +180,8 @@
 				4D1D2D1A1AD9AB38004598C8 /* Models */,
 				4D1D2CF81AD8E578004598C8 /* AppDelegate.h */,
 				4D1D2CF91AD8E578004598C8 /* AppDelegate.m */,
-				4D1D2CFB1AD8E578004598C8 /* ViewController.h */,
-				4D1D2CFC1AD8E578004598C8 /* ViewController.m */,
 				4D1D2D011AD8E578004598C8 /* Images.xcassets */,
 				4D1D2CF41AD8E578004598C8 /* Supporting Files */,
-				CD344E581AD9AB900012A8B3 /* Storyboard.storyboard */,
-				CD4D7BCA1AD9F9DF0033F9DE /* GTImageViewController.h */,
-				CD4D7BCB1AD9F9DF0033F9DE /* GTImageViewController.m */,
-				CD4D7BC51AD9DAE30033F9DE /* GTDataCellTableViewCell.h */,
-				CD4D7BC81AD9DBAA0033F9DE /* GTDataCell.xib */,
-				CD4D7BC61AD9DAE30033F9DE /* GTDataCellTableViewCell.m */,
-				CD4D7BC21AD9CAD00033F9DE /* GTDataViewController.h */,
-				CD4D7BC31AD9CAD00033F9DE /* GTDataViewController.m */,
-				CD344E991AD9B03E0012A8B3 /* GTRegisterViewController.h */,
-				CD344E9A1AD9B03E0012A8B3 /* GTRegisterViewController.m */,
-				4D1D2D751ADA25B2004598C8 /* GTWebViewController.h */,
-				4D1D2D761ADA25B2004598C8 /* GTWebViewController.m */,
 			);
 			path = TransientWatch;
 			sourceTree = "<group>";
@@ -346,9 +332,13 @@
 				CD4D7BC81AD9DBAA0033F9DE /* GTDataCell.xib */,
 				CD4D7BC61AD9DAE30033F9DE /* GTDataCellTableViewCell.m */,
 				CD4D7BC21AD9CAD00033F9DE /* GTDataViewController.h */,
+				4D1D2CFB1AD8E578004598C8 /* ViewController.h */,
+				4D1D2CFC1AD8E578004598C8 /* ViewController.m */,
 				CD4D7BC31AD9CAD00033F9DE /* GTDataViewController.m */,
 				CD344E991AD9B03E0012A8B3 /* GTRegisterViewController.h */,
 				CD344E9A1AD9B03E0012A8B3 /* GTRegisterViewController.m */,
+				4D1D2D751ADA25B2004598C8 /* GTWebViewController.h */,
+				4D1D2D761ADA25B2004598C8 /* GTWebViewController.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
