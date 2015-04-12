@@ -9,6 +9,8 @@
 #import "GTImageViewController.h"
 #import "GTWebViewController.h"
 #import "UIImageView+AFNetworking.h"
+#import "GTFavoritesManager.h"
+#import "MBProgressHUD.h"
 
 NSString* const urlBase = @"http://galactic-titans.herokuapp.com/map?location=";
 NSString* const imageBaseURL = @"http://galactic-titans.herokuapp.com/preview?location=";
@@ -43,24 +45,30 @@ NSString* const imageBaseURL = @"http://galactic-titans.herokuapp.com/preview?lo
   
   [self style];
     // Do any additional setup after loading the view.
-    UITapGestureRecognizer * gestureRecognizer =[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageViewTapped:)];
-  [self.view addGestureRecognizer:gestureRecognizer];
+  [self.imageView setUserInteractionEnabled:YES];
+  UITapGestureRecognizer * gestureRecognizer =[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageViewTapped:)];
+  [self.imageView addGestureRecognizer:gestureRecognizer];
     
     
     
     
     self.favoriteButton.layer.cornerRadius = 10;
-    self.favoriteButton.backgroundColor = [UIColor colorWithRed:0.404 green:0.259 blue:0.545 alpha:1];
-    UIImage *favoriteButtonImage = [UIImage imageNamed:@"image.png"];
-    [self.favoriteButton setImage:favoriteButtonImage forState:UIControlStateNormal];
-    
-    UIImage *favoriteButtonImageHighlighted = [UIImage imageNamed:@"image.png"];
-    [self.favoriteButton setImage:favoriteButtonImageHighlighted forState:UIControlStateHighlighted];
-    
+    self.favoriteButton.backgroundColor = [UIColor clearColor];
+    [self.favoriteButton addTarget:self action:@selector(favoriteButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     
 }
 
-
+- (void)favoriteButtonTapped:(id)sender {
+  if (![self.favoriteButton.imageView.image isEqual:[UIImage imageNamed:@"StarHighlighted.png"]]) {
+    [GTFavoritesManager addFavorites:self.event.name successBlock:^{
+      return;
+    } failureBlock:^(NSError *error) {
+      return;
+    }];
+    
+    [self.favoriteButton setImage:[UIImage imageNamed:@"StarHighlighted.png"] forState:UIControlStateNormal];
+  }
+}
 
 -(void)imageViewTapped:(UITapGestureRecognizer*)sender{
   NSString* webViewURL = [[NSString stringWithFormat:@"%@%@", urlBase, self.event.name] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -81,11 +89,24 @@ NSString* const imageBaseURL = @"http://galactic-titans.herokuapp.com/preview?lo
   self.todayDataLabel.text = [NSString stringWithFormat:@"%ld", (long)self.event.todayReading];
   self.yesterdayDataLabel.text = [NSString stringWithFormat:@"%ld", (long)self.event.yesterdayReading];
   self.changeDataLabel.text = [NSString stringWithFormat:@"%ld", (long)self.event.difference];
-  NSString* theURL = [[NSString stringWithFormat:@"%@%@", imageBaseURL, self.event.name] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
   NSDateFormatter* dateFormatter = [NSDateFormatter new];
   dateFormatter.dateFormat = @"MMMM, dd";
   self.dateLabel.text = [dateFormatter stringFromDate:[NSDate date]];
-  [self.imageView setImageWithURL:[NSURL URLWithString:theURL]];
+  
+  [MBProgressHUD showHUDAddedTo:self.imageView animated:YES];
+  NSString* imageURL = [[NSString stringWithFormat:@"%@%@", imageBaseURL, self.event.name] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+  [self.imageView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:imageURL]]
+                        placeholderImage:nil
+                                 success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+                                   [MBProgressHUD hideAllHUDsForView:self.imageView animated:YES];
+                                   self.imageView.image = image;
+                                   return;
+                                 }
+                                 failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+                                   [MBProgressHUD hideAllHUDsForView:self.imageView animated:YES];
+                                   return;
+                                 }];
+  
   if (self.event.difference >= 0) {
     self.arrowLabel.image = [UIImage imageNamed:@"UpArrow"];
   } else {

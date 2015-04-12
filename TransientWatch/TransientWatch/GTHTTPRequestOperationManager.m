@@ -49,7 +49,7 @@ static GTHTTPRequestOperationManager* shared;
   
   NSMutableURLRequest *mutableRequest = [request mutableCopy];
   [mutableRequest addValue:@"application/vnd.amgr.v1.0+json" forHTTPHeaderField:@"Accept"];
-  [mutableRequest addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+  //[mutableRequest addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
   
   return [super HTTPRequestOperationWithRequest:[mutableRequest copy] success:success failure:failure];
 }
