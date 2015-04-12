@@ -103,15 +103,11 @@
    
     NSString * email = self.EmailTextField.text;
     
-    
-
-        if ([self NSStringIsValidPhoneNumber:phoneNum]) {
-            [defaults setObject:phoneNum forKey:@"phoneNum"];
-            
             
             
             if ([self NSStringIsValidEmail:email]){
                 [defaults setObject:email forKey:@"Email"];
+                 [defaults setObject:phoneNum forKey:@"phoneNum"];
                 GTDataViewController *dataViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DataViewController"];
                 [self presentViewController:dataViewController animated:YES completion:nil];
             }else{
@@ -120,14 +116,6 @@
                 
             }
 
-            
-            
-        }else{
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid Phone Number" message:@"Please enter a valid phone number." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:@"Cancel", nil];
-            [alert show];
-        }
-
-    
     
     
     

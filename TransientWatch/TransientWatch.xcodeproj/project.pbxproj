@@ -155,7 +155,7 @@
 		4D1D2CE81AD8E578004598C8 = {
 			isa = PBXGroup;
 			children = (
-				4D1D2CF31AD8E578004598C8 /* TransientWatch */,
+				CD4D7BCD1ADA2D6B0033F9DE /* New Group */,
 				4D1D2D0D1AD8E578004598C8 /* TransientWatchTests */,
 				4D1D2CF21AD8E578004598C8 /* Products */,
 				4D1D2D2F1AD9C925004598C8 /* ThirdParty */,
@@ -174,6 +174,7 @@
 		4D1D2CF31AD8E578004598C8 /* TransientWatch */ = {
 			isa = PBXGroup;
 			children = (
+				CD4D7BCE1ADA2DAA0033F9DE /* UI */,
 				4D1D2D6B1AD9CD89004598C8 /* Network */,
 				4D1D2D1E1AD9AFBC004598C8 /* images */,
 				4D1D2D1A1AD9AB38004598C8 /* Models */,
@@ -325,6 +326,31 @@
 				4D1D2D731AD9DD4A004598C8 /* GTRegistrationManager.m */,
 			);
 			name = Network;
+			sourceTree = "<group>";
+		};
+		CD4D7BCD1ADA2D6B0033F9DE /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				4D1D2CF31AD8E578004598C8 /* TransientWatch */,
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		CD4D7BCE1ADA2DAA0033F9DE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CD344E581AD9AB900012A8B3 /* Storyboard.storyboard */,
+				CD4D7BCA1AD9F9DF0033F9DE /* GTImageViewController.h */,
+				CD4D7BCB1AD9F9DF0033F9DE /* GTImageViewController.m */,
+				CD4D7BC51AD9DAE30033F9DE /* GTDataCellTableViewCell.h */,
+				CD4D7BC81AD9DBAA0033F9DE /* GTDataCell.xib */,
+				CD4D7BC61AD9DAE30033F9DE /* GTDataCellTableViewCell.m */,
+				CD4D7BC21AD9CAD00033F9DE /* GTDataViewController.h */,
+				CD4D7BC31AD9CAD00033F9DE /* GTDataViewController.m */,
+				CD344E991AD9B03E0012A8B3 /* GTRegisterViewController.h */,
+				CD344E9A1AD9B03E0012A8B3 /* GTRegisterViewController.m */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
