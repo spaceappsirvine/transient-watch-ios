@@ -8,13 +8,14 @@
 
 #import "GTImageViewController.h"
 #import "GTWebViewController.h"
+#import "UIImageView+AFNetworking.h"
 
 NSString* const urlBase = @"http://galactic-titans.herokuapp.com/map?location=";
+NSString* const imageBaseURL = @"http://galactic-titans.herokuapp.com/preview?location=";
 
 @interface GTImageViewController () <UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *ascentionDataLabel;
 @property (weak, nonatomic) IBOutlet UILabel *declenationDataLabel;
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *todayDataLabel;
@@ -23,6 +24,7 @@ NSString* const urlBase = @"http://galactic-titans.herokuapp.com/map?location=";
 @property (weak, nonatomic) IBOutlet UIImageView *arrowLabel;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *typeLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 
 @end
@@ -42,13 +44,13 @@ NSString* const urlBase = @"http://galactic-titans.herokuapp.com/map?location=";
   
   [self style];
     // Do any additional setup after loading the view.
-    UITapGestureRecognizer * gestureRecognizer =[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(webViewTapped:)];
-  [self.view addGestureRecognizer:gestureRecognizer];
+    UITapGestureRecognizer * gestureRecognizer =[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageViewTapped:)];
+  [self.imageView addGestureRecognizer:gestureRecognizer];
 }
 
 
 
--(void)webViewTapped:(UITapGestureRecognizer*)sender{
+-(void)imageViewTapped:(UITapGestureRecognizer*)sender{
   NSString* webViewURL = [[NSString stringWithFormat:@"%@%@", urlBase, self.event.name] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
   GTWebViewController* webViewController = [[GTWebViewController alloc] initWithURL:[NSURL URLWithString:webViewURL]];
   webViewController.view.frame = self.view.bounds;
@@ -67,8 +69,8 @@ NSString* const urlBase = @"http://galactic-titans.herokuapp.com/map?location=";
   self.todayDataLabel.text = [NSString stringWithFormat:@"%ld", (long)self.event.todayReading];
   self.yesterdayDataLabel.text = [NSString stringWithFormat:@"%ld", (long)self.event.yesterdayReading];
   self.changeDataLabel.text = [NSString stringWithFormat:@"%ld", (long)self.event.difference];
-  NSString* theURL = [[NSString stringWithFormat:@"%@%@", urlBase, self.event.name] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-  [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:theURL]]];
+  NSString* theURL = [[NSString stringWithFormat:@"%@%@", imageBaseURL, self.event.name] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+  [self.imageView setImageWithURL:[NSURL URLWithString:theURL]];
   if (self.event.difference >= 0) {
     self.arrowLabel.image = [UIImage imageNamed:@"UpArrow"];
   } else {
