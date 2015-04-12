@@ -22,6 +22,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
+  NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+  if ([defaults objectForKey:@"Email"]) {
+    GTDataViewController *dataViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DataViewController"];
+    [self.navigationController pushViewController:dataViewController animated:YES];
+  }
+  
     // Do any additional setup after loading the view.
   self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:41.0f/255.0f green:68.0f/255.0f blue:160.0f/255.0f alpha:1.0f];
   self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"GalacticTitansLogo@2px"]];
