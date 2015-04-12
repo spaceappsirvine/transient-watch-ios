@@ -7,6 +7,9 @@
 //
 
 #import "GTImageViewController.h"
+#import "GTWebViewController.h"
+
+NSString* const urlBase = @"http://galactic-titans.herokuapp.com/map?location=";
 
 @interface GTImageViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *ascentionDataLabel;
@@ -27,7 +30,15 @@
 @implementation GTImageViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+  [super viewDidLoad];
+  
+  self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"GalacticTitansLogo@2px"]];
+  
+  UIBarButtonItem* backItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"navigation-bar.back", nil)
+                                                               style:UIBarButtonItemStylePlain
+                                                              target:nil
+                                                              action:nil];
+  [self.navigationItem setBackBarButtonItem:backItem];
   
   [self style];
     // Do any additional setup after loading the view.
@@ -46,6 +57,8 @@
   self.todayDataLabel.text = [NSString stringWithFormat:@"%ld", (long)self.event.todayReading];
   self.yesterdayDataLabel.text = [NSString stringWithFormat:@"%ld", (long)self.event.yesterdayReading];
   self.changeDataLabel.text = [NSString stringWithFormat:@"%ld", (long)self.event.difference];
+  NSString* theURL = [[NSString stringWithFormat:@"%@%@", urlBase, self.event.name] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+  [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:theURL]]];
   if (self.event.difference >= 0) {
     self.arrowLabel.image = [UIImage imageNamed:@"UpArrow"];
   } else {
@@ -53,14 +66,6 @@
   }
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
